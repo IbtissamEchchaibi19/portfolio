@@ -99,6 +99,33 @@ const projects = [
     { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/beekeepchatbot' },
     { type: 'demo', url: 'https://www.loom.com/share/4bdcc5864fa84e80a6b863e23876e9b3?sid=db383b17-768d-49de-b7dc-8f36b260df0a' }
   ],
+},
+{
+  id: 'graph-rag-lab-reports',
+  title: 'GraphRAG Document Analysis & Query System',
+  description: 'Prototype enterprise-grade GraphRAG (Graph-based Retrieval-Augmented Generation) system built with Python, Streamlit, Neo4j, and Google Gemini for intelligent laboratory report analysis. This prototype demonstrates how knowledge graphs, semantic search, and AI-driven response generation can be combined for advanced document intelligence. The showcased version uses only fake/sample data; the exact architecture and real project remain private for clients. The framework can be adapted to any type of technical documentation or compliance-based reports by simply changing the document sources and domain standards.',
+  image: null,
+  imageGradient: 'from-cyan-600 to-blue-700',
+  tags: [
+    'GraphRAG',
+    'Neo4j',
+    'Streamlit',
+    'Google Gemini',
+    'SentenceTransformers',
+    'Knowledge Graphs',
+    'Semantic Search',
+    'Document Intelligence'
+  ],
+  category: 'Graph-Based RAG & Document Analysis',
+  status: 'Prototype',
+  timeline: '4 months',
+  year: '2025',
+  client: 'Private (Laboratory & Technical Documentation)',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/GraphRAG-Retreving-Reports/tree/master' },
+    { type: 'demo', url: 'https://vimeo.com/manage/videos/1118154921' }
+  ],
 }
 
 
