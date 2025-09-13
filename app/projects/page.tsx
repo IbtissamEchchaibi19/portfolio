@@ -206,7 +206,65 @@ const projects = [
     { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/master' },
     { type: 'demo', url: 'https://vimeo.com/1118396656?share=copy' }
   ],
+},
+{
+  id: 'wastewater-surveillance-ai',
+  title: 'Wastewater Surveillance AI System',
+  description: 'AI-powered system for real-time monitoring of pathogens and mycotoxins in wastewater, integrating machine learning for outbreak prediction, risk assessment, and interactive dashboard visualization. Developed as part of the SDFA Hackathon, featuring ensemble predictive models, anomaly detection, environmental intelligence, and real-time alerting for public health protection.',
+  image: null,
+  imageGradient: 'from-teal-500 to-blue-600',
+  tags: [
+    'Python',
+    'Streamlit',
+    'Scikit-learn',
+    'XGBoost',
+    'LightGBM',
+    'Plotly',
+    'Time Series',
+    'Machine Learning',
+    'Dashboard'
+  ],
+  category: 'Environmental AI Systems',
+  status: 'Prototype',
+  timeline: '3 months',
+  year: '2025',
+  client: 'SDFA Hackathon',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Wastewater-Surveillance-AI-System/blob/master' },
+    { type: 'demo', url: 'https://vimeo.com/1117814824?share=copy' }
+  ],
+},
+{
+  id: 'thiqah-foods-ai',
+  title: 'Thiqah Foods AI - Risk Prediction System',
+  description: 'AI-powered food safety monitoring platform for the Saudi Arabian food industry, providing real-time risk scoring, predictive analytics, and interactive dashboards. Developed as part of the SDFA Hackathon, the system integrates ensemble machine learning models, multi-factor environmental and supply chain data, and bilingual dashboard support for proactive risk management.',
+  image: null,
+  imageGradient: 'from-orange-500 to-red-600',
+  tags: [
+    'Python',
+    'Streamlit',
+    'Scikit-learn',
+    'XGBoost',
+    'LightGBM',
+    'Plotly',
+    'Machine Learning',
+    'Dashboard',
+    'Risk Prediction'
+  ],
+  category: 'Food Safety AI Systems',
+  status: 'Prototype',
+  timeline: '2 months',
+  year: '2025',
+  client: 'SDFA Hackathon',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Thiqah-Foods-AI/tree/master' },
+    { type: 'demo', url: 'https://vimeo.com/1118413096?share=copy' }
+  ],
 }
+
+
 
 
 
