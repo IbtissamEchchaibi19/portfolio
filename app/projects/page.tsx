@@ -126,7 +126,90 @@ const projects = [
     { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/GraphRAG-Retreving-Reports/tree/master' },
     { type: 'demo', url: 'https://vimeo.com/manage/videos/1118154921' }
   ],
+},
+{
+  id: 'mistral-7b-beekeeping-finetune',
+  title: 'Mistral-7B Domain Fine-Tuning System (Beekeeping Prototype)',
+  description: 'Prototype enterprise-grade fine-tuning pipeline demonstrating specialization of Mistral-7B on beekeeping domain knowledge using QLoRA. This system showcases memory-efficient fine-tuning, automated dataset processing, and comprehensive evaluation metrics. All data used is synthetic/fake; the actual client project and model weights remain private. The framework can be adapted to any domain or document source for domain-specific language model training.',
+  image: null,
+  imageGradient: 'from-yellow-400 to-orange-600',
+  tags: [
+    'Mistral-7B',
+    'QLoRA',
+    'Fine-Tuning',
+    'Lightning AI',
+    'Weights & Biases',
+    'Domain Adaptation',
+    'PDF Processing',
+    'AI Evaluation Metrics'
+  ],
+  category: 'Domain-Specific LLM Fine-Tuning',
+  status: 'Prototype',
+  timeline: '3 months',
+  year: '2025',
+  client: 'Private (Beekeeping & Domain Knowledge)',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/FineTuningLLM/tree/master' }
+  ],
+},
+{
+  id: 'ai-gmail-email-assistant',
+  title: 'AI-Powered Gmail Email Assistant (Prototype)',
+  description: 'Intelligent email assistant demonstrating autonomous Gmail triage, response drafting, meeting scheduling, and inbox management using AI. Built with LangGraph for workflow orchestration and Google Gemini 2.5 as the core LLM. The system showcases advanced agent patterns, persistent memory, and human-in-the-loop supervision. This is a prototype/demo; no live client data is used.',
+  image: null,
+  imageGradient: 'from-blue-400 to-indigo-600',
+  tags: [
+    'LangGraph',
+    'LangChain',
+    'Google Gemini',
+    'Gmail API',
+    'AI Agents',
+    'Human-in-the-Loop',
+    'Workflow Orchestration',
+    'Persistent Memory'
+  ],
+  category: 'Autonomous AI Agent Systems',
+  status: 'Prototype',
+  timeline: '2 months',
+  year: '2025',
+  client: 'Demo/Prototype',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Email-Assistance-Agent/blob/master' },
+    { type: 'demo', url: 'https://vimeo.com/1111290857?share=copy' }
+  ],
+},
+{
+  id: 'github-mcp-tools-agent',
+  title: 'GitHub MCP Tools Agent (Prototype)',
+  description: 'Intelligent conversational agent bridging natural language queries with GitHub\'s Model Context Protocol (MCP) server. Enables tool discovery, configuration, and execution through an intuitive chat interface powered by LangGraph, Llama 3.3 70B, and a hybrid vector database. Demonstrates advanced semantic search, multi-turn conversations, and workflow orchestration. Prototype/demo with no live client data.',
+  image: null,
+  imageGradient: 'from-purple-500 to-pink-600',
+  tags: [
+    'LangGraph',
+    'Llama 3.3',
+    'Weaviate',
+    'GitHub MCP',
+    'Docker',
+    'Semantic Search',
+    'AI Agents',
+    'Vector Database'
+  ],
+  category: 'Autonomous AI Agent Systems',
+  status: 'Prototype',
+  timeline: '2 months',
+  year: '2025',
+  client: 'Demo/Prototype',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/master' },
+    { type: 'demo', url: 'https://vimeo.com/1118396656?share=copy' }
+  ],
 }
+
+
+
 
 
 ]
