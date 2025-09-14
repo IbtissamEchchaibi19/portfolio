@@ -262,7 +262,65 @@ const projects = [
     { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Thiqah-Foods-AI/tree/master' },
     { type: 'demo', url: 'https://vimeo.com/1118413096?share=copy' }
   ],
+},
+{
+  id: 'ai-resume-assistant',
+  title: 'AI-Powered Resume Assistant (Prototype)',
+  description: 'Prototype platform built with FastAPI and React to showcase AI-driven career support. It analyzes resumes, generates tailored interview questions, creates job-specific cover letters, and delivers real-time job market insights. Powered by Google Gemini, LangChain, and MongoDB with RAG-based semantic search. This prototype uses only fake/demo data; the full architecture and real data are conserved privately for clients.',
+  image: null,
+  imageGradient: 'from-green-500 to-blue-600',
+  tags: [
+    'Python',
+    'FastAPI',
+    'React',
+    'LangChain',
+    'Google Gemini',
+    'MongoDB',
+    'Pinecone',
+    'RAG Systems',
+    'Career AI'
+  ],
+  category: 'Career Intelligence Systems',
+  status: 'Prototype',
+  timeline: '3 months',
+  year: '2025',
+  client: 'Private (Prototype Showcase)',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/JobSeeker/blob/main' },
+    { type: 'demo', url: 'https://vimeo.com/1118414850?share=copy' }
+  ],
+},
+{
+  id: 'facial-verification-system',
+  title: 'Facial Recognition & Identity Verification System (Prototype)',
+  description: 'Prototype platform built with Python Flask, PyTorch, OpenCV, and AWS Textract to demonstrate biometric identity verification. The system combines facial recognition, document analysis, and cross-modal identity validation through a RAG-inspired verification workflow. Features include facial similarity scoring with FaceNet embeddings, OCR-based ID processing, cross-verification between selfies/screenshots/documents, and secure data management with MongoDB and AWS S3. This prototype showcases the core capabilities using only fake/demo data — the production architecture and real data remain private for clients.',
+  image: null,
+  imageGradient: 'from-purple-600 to-indigo-700',
+  tags: [
+    'Python',
+    'Flask',
+    'PyTorch',
+    'OpenCV',
+    'dlib',
+    'AWS Textract',
+    'MongoDB',
+    'Amazon S3',
+    'JWT Authentication',
+    'Biometric Systems'
+  ],
+  category: 'Identity Verification Systems',
+  status: 'Prototype',
+  timeline: '4 months',
+  year: '2025',
+  client: 'Private (Prototype Showcase)',
+  featured: true,
+  links: [
+    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/kyc-api/blob/main/' },
+    { type: 'demo', url: 'https://www.loom.com/share/10dbf7e324724eecaeb4fbfe86bb88dc?sid=b461ea41-88df-4542-abc6-0d7c18513bb1' }
+  ],
 }
+
 
 
 
