@@ -14,115 +14,153 @@ export const metadata: Metadata = {
 
 const workExperience = [
   {
-    title: 'Applied AI & ML Engineer',
-    company: 'Fujairah Research Center',
-    location: 'Fujairah, UAE (On site)',
-    period: 'Feb 2025 - Sept 2025',
-    type: 'Full-Time',
-    description: 'Developed a multi-agent AI system for Honey Quality Verification and Beekeeper Support, integrating document processing and analytics dashboards.',
+    title: 'AI Engineer – Hack4SaferPlates Hackathon (2nd Place Winner)',
+    company: 'SFDA',
+    location: 'Riyadh, Saudi Arabia (Remote)',
+    period: 'Sept 2025 - Sept 2025',
+    type: 'Hackathon',
+    description: 'Contributed to the AI component of an innovative food safety platform as part of the Fujairah Research Centre team, achieving 2nd place.',
     achievements: [
-      'Implemented Honey Expert Agent by fine-tuning Mistral Instruct 7B for expert knowledge retrieval with evaluation via W&B.',
-      'Built Honey Quality Verification Agent automating lab report compliance using Azure Document Intelligence, deepset/roberta-base and facebook/bart-large-mnli.',
-      'Created Automated Dashboard Analytics Agent using Plotly, Dash, pdfplumber, and Azure Document Intelligence.',
-      'Developed RAG pipeline with LangChain, Neo4j, and LLaMA 4 for intelligent document retrieval.',
-      'Orchestrated multi-LLM interactions using MCP and LangGraph, deploying FastAPI microservices on Azure.',
+      'Developed an AI-powered PDF intelligence system to extract and verify food safety parameters.',
+      'Designed an ensemble-based risk prediction model with time-series features and anomaly detection.'
     ],
-    technologies: ['Python', 'Hugging Face', 'LangChain', 'LangGraph', 'LangSmith', 'Pinecone', 'Azure AI', 'FastAPI', 'Docker', 'MCP', 'LLaMA', 'Mistral'],
+    technologies: ['Python', 'Hugging Face (BART-large-MNLI)', 'scikit-learn', 'XGBoost', 'LightGBM', 'Random Forest', 'Gradient Boosting'],
   },
   {
-    title: 'Applied AI & ML Engineer (Consultant)',
-    company: 'Independent Consultant',
+    title: 'AI Software Engineer',
+    company: 'Fujairah Research Center',
+    location: 'Fujairah, UAE (On site)',
+    period: 'Jan 2025 - Sept 2025',
+    type: 'Full-Time',
+    description: 'Built a multi-agent AI platform for honey quality verification, document processing, and production analytics for beekeepers and honey producers.',
+    achievements: [
+      'Fine-tuned Mistral Instruct 7B on specialized datasets with W&B monitoring for expert knowledge retrieval.',
+      'Automated compliance validation of lab reports using Azure Document Intelligence with RoBERTa-base-SQuAD2 and BART-large-MNLI.',
+      'Developed a RAG pipeline with LangChain, Neo4j, and LLaMA 4, tracked with LangSmith for intelligent document retrieval.',
+      'Orchestrated scalable deployment of FastAPI microservices on Azure using MCP, LangGraph, and Docker.'
+    ],
+    technologies: ['Python', 'Hugging Face', 'LangChain', 'LangGraph', 'LangSmith', 'Neo4j', 'Mistral', 'LLaMA', 'Azure AI', 'Docker', 'W&B', 'Gradio', 'Dash'],
+  },
+  {
+    title: 'AI Software Engineer (Contract)',
+    company: 'Freelance Client',
     location: 'UAE (Remote)',
     period: 'Jul 2025 - Aug 2025',
     type: 'Freelance',
-    description: 'Enhanced an aviation medical chatbot using RAG, NLP, and vector search to improve medication compliance guidance for pilots and crew.',
+    description: 'Enhanced an aviation medical chatbot for pilots and crew using RAG, NLP, and domain-specific embeddings.',
     achievements: [
-      'Contributed to system architecture design including data preprocessing, knowledge base structuring, and vector database integration.',
-      'Built vector embeddings using domain-specific models (BioBERT, ClinicalBERT) integrated into FAISS for semantic search.',
-      'Supported roadmap planning for testing, validation, and deployment aligned with aviation safety regulations.',
+      'Integrated BioBERT and ClinicalBERT embeddings with Chroma for fast semantic search and compliance guidance.',
+      'Designed system architecture including NER-based preprocessing, synonym mapping, and knowledge base structuring.',
+      'Supported roadmap planning for testing, validation, and deployment aligned with aviation safety regulations.'
     ],
-    technologies: ['Python', 'BioBERT', 'FAISS', 'NLTK'],
+    technologies: ['Python', 'LangChain', 'LLaMA', 'BioBERT', 'ClinicalBERT', 'Chroma'],
   },
   {
-    title: 'Applied AI Cloud Engineer',
+    title: 'AI Software Engineer (Part-time)',
     company: 'Devtospace',
     location: 'Paris, France (Remote)',
-    period: 'Oct 2024 - Dec 2024',
-    type: 'Full-Time',
-    description: 'Developed a cloud-based KYC system using AI-powered computer vision and automated document processing on AWS.',
+    period: 'Sept 2024 - Dec 2024',
+    type: 'Part-time',
+    description: 'Developed a cloud-based KYC system on AWS combining AI-powered computer vision and automated document processing.',
     achievements: [
-      'Automated identity document processing with Amazon Textract, PyTorch, and OpenCV.',
-      'Engineered AI-driven liveness detection with Amazon Rekognition.',
-      'Designed Flask-based REST API with screenshot prevention and session management.',
-      'Dockerized application and deployed on AWS EC2 with S3 storage and CloudWatch monitoring.',
+      'Implemented identity verification and structured data extraction using Amazon Textract, PyTorch, and OpenCV.',
+      'Engineered liveness detection with Amazon Rekognition for anti-spoofing and real-time tracking.',
+      'Deployed secure Flask REST API on AWS EC2 with S3 storage, Docker containerization, and CloudWatch monitoring integrated with a React front-end.'
     ],
-    technologies: ['PyTorch', 'OpenCV', 'Amazon Rekognition', 'Amazon Textract', 'Amazon S3', 'Flask', 'Docker', 'AWS EC2', 'AWS CloudWatch'],
+    technologies: ['PyTorch', 'OpenCV', 'Amazon Rekognition', 'Amazon Textract', 'Amazon S3', 'Flask', 'Docker', 'MongoDB', 'AWS EC2', 'AWS CloudWatch', 'React'],
   },
   {
-    title: 'Applied AI Engineer Intern',
-    company: '3DSmartFactory',
-    location: 'Mohammedia, Morocco',
-    period: 'Jul 2024 - Sept 2024',
+    title: 'AI Software Engineer Intern',
+    company: '3D Smart Factory',
+    location: 'Mohammedia, Morocco (Hybrid)',
+    period: 'Jun 2024 - Sept 2024',
     type: 'Internship',
-    description: 'Engineered a RAG-powered AI platform for personalized interview coaching, CV insights, and auto-generated application letters.',
+    description: 'Engineered a RAG-powered platform with LangChain and Google Gemini for personalized interview coaching and job intelligence.',
     achievements: [
-      'Developed NLP pipelines using NLTK and Hugging Face Transformers for semantic search and entity extraction.',
-      'Integrated vector search with Pinecone for accurate document retrieval.',
-      'Implemented a context-aware conversational agent augmented with real-time web data.',
-      'Built backend with FastAPI, containerized with Docker, deployed to AWS.',
-      'Evaluated RAG performance using LangSmith.',
+      'Developed NLP pipelines with NLTK and Hugging Face Transformers for semantic search and document understanding.',
+      'Integrated Pinecone for fast vector search and context-aware responses.',
+      'Developed a job intelligence module using Google APIs to provide real-time market insights and adaptive job recommendations.',
+      'Deployed containerized FastAPI backend with MongoDB on AWS, monitored via LangSmith, integrated with React front-end.'
     ],
-    technologies: ['LangChain', 'Gemini Pro Vision', 'NLTK', 'SpaCy', 'Transformers', 'Pinecone', 'FastAPI', 'MongoDB', 'AWS', 'Google APIs', 'Docker', 'LangSmith'],
+    technologies: ['LangChain', 'Gemini Pro Vision', 'NLTK', 'SpaCy', 'Transformers', 'Pinecone', 'FastAPI', 'MongoDB', 'AWS', 'Google APIs', 'Docker', 'LangSmith', 'React'],
   },
   {
-    title: 'Data Scientist Hackathon Participant',
-    company: 'Leyton',
-    location: 'Casablanca, Morocco',
-    period: 'Mar 2024',
-    type: 'Hackathon',
-    description: 'Engineered a Smart Retrieval System to extract and interact with text/images from PDFs for R&D insights.',
+    title: 'ML Software Engineer Intern',
+    company: 'Technocolabs Softwares',
+    location: 'India (Remote)',
+    period: 'May 2024 - Jun 2024',
+    type: 'Internship',
+    description: 'Built an ML system for automated mortgage approval and prepayment risk assessment.',
     achievements: [
-      'Developed document analysis tool leveraging LlamaIndex and LLaMA 2 for querying content and generating reports.',
-      'Designed user-friendly interface with Streamlit.',
+      'Engineered borrower profile analysis using statistical modeling and advanced analytics.',
+      'Created visualizations with Matplotlib and Seaborn to highlight key risk factors.',
+      'Deployed a Flask web app integrating the full ML pipeline for real-time predictions.'
     ],
-    technologies: ['Python', 'LlamaIndex', 'LLaMA 2', 'ChromaDB', 'Streamlit'],
+    technologies: ['Python', 'pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'scikit-learn', 'Flask'],
+  },
+  {
+    title: 'Software Engineer Intern',
+    company: 'DigitalSky',
+    location: 'Morocco (Hybrid)',
+    period: 'Jun 2023 - Aug 2023',
+    type: 'Internship',
+    description: 'Developed a project management web application with React and Express.js.',
+    achievements: [
+      'Implemented JWT authentication and role-based dashboards for secure task management.',
+      'Integrated MongoDB for real-time metrics and analytics.',
+    ],
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Docker'],
   },
 ]
 
 const education = [
   {
-    degree: 'Engineering degree, Software Engineering and Digitalization',
-    school: 'National High School of Electricity and Mechanics (ENSEM)',
-    location: 'Morocco',
+    degree: 'Engineering degree, Software Engineering and Digitalisation',
+    school: 'ENSEM Engineering School',
+    location: 'Casablanca, Morocco',
     period: 'Sept 2022 - Jun 2025',
     status: 'Current',
-    description: 'Engineering program specializing in software engineering and digitalization.',
+    description: 'Engineering program specializing in software engineering and digitalisation.',
     achievements: [
-      'Completed preparatory classes for major engineering schools (CPGE).',
-      'Focused on advanced software engineering, AI, and cloud technologies.',
+      'Completed preparatory classes (CPGE) for admission to major engineering schools.',
+      'Focused on advanced software engineering, AI, ML, and cloud technologies.'
     ],
     coursework: ['Software Engineering', 'AI & ML', 'Data Structures', 'Algorithms', 'Cloud Computing'],
+  },
+  {
+    degree: 'Mathematics and Physics Diploma for Admission to National Engineering Schools',
+    school: 'CPGE Preparatory Classes',
+    location: 'Taza, Morocco',
+    period: 'Sept 2020 - Jul 2022',
+    status: 'Completed',
+    description: 'Two-year intensive program in Mathematics and Physics to prepare for competitive engineering school exams.',
+    achievements: [
+      'Acquired strong foundations in mathematics, physics, and computer science.',
+      'Successfully admitted to ENSEM Engineering School.',
+    ],
+    coursework: ['Mathematics', 'Physics', 'Computer Science'],
   },
 ]
 
 const projects = [
   {
-    title: 'EmailAssistant Agent',
-    description: 'Autonomous email assistant using LangGraph and Gemini AI to triage, draft, and schedule emails with LangSmith integration.',
+    title: 'Email Assistant Agent',
+    description: 'Built an autonomous email assistant with LangGraph and Google Gemini for inbox triage, drafting, and scheduling, integrated with LangSmith for workflow monitoring and memory persistence.',
   },
   {
     title: 'GitHub MCP Tools Agent',
-    description: 'Automated GitHub MCP operations via LangGraph, LLaMA 3.3, Docker, and LangSmith monitoring.',
+    description: 'Developed a conversational agent to automate GitHub MCP operations using LangGraph orchestration, LLaMA 3.3, Weaviate vector search, Docker MCP toolkits, and LangSmith observability.',
   },
   {
-    title: 'AI-Powered Podcast Knowledge Extraction Platform',
-    description: 'Converts podcasts into structured insights using AWS Transcribe, Comprehend, OpenSearch, SageMaker, CrewAI, and DeepSeek LLMs.',
+    title: 'AI-Powered Podcast Platform',
+    description: 'Designed an end-to-end pipeline to convert podcasts into structured, searchable insights using AWS Transcribe, Comprehend, OpenSearch, SageMaker, CrewAI, and DeepSeek for advanced NLP analysis.',
   },
   {
-    title: 'Generative AI Personalized Learning Platform',
-    description: 'Adaptive English learning platform using Qwen LLM on Vertex AI, RLHF, Google Speech APIs, and ElasticSearch for learner analytics.',
+    title: 'Generative AI Learning Platform',
+    description: 'Engineered an adaptive English learning prototype leveraging Qwen LLM on Vertex AI with RLHF, Google Speech APIs for interactive voice feedback, and ElasticSearch for personalized learner analytics.',
   },
 ]
+
 
 export default function ExperiencePage() {
   return (

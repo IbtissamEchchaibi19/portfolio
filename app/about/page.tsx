@@ -139,7 +139,7 @@ export default function AboutPage() {
                     <div className="flex items-center">
                       <Code className="w-8 h-8 text-primary mr-3" />
                       <div>
-                        <p className="text-2xl font-bold">45+</p>
+                        <p className="text-2xl font-bold">25+</p>
                         <p className="text-sm text-muted-foreground">Projects</p>
                       </div>
                     </div>

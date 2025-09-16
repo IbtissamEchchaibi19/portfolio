@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image' // Import Next.js Image component
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -23,7 +23,7 @@ import {
   Linkedin,
 } from 'lucide-react'
 
-// Updated with Ibtissam's contact info
+// Updated contact info
 const contactMethods = [
   {
     title: 'Email',
@@ -43,21 +43,24 @@ const contactMethods = [
   },
 ]
 
-// Updated with Ibtissam's expertise
+// Expertise updated from CV
 const expertiseAreas = [
   {
-    title: 'Backend & Cloud Architecture',
-    description: 'Architecting scalable backend systems with Python/Django and deploying on AWS with Docker & CI/CD.',
-    icon: Server,
-  },
-  {
-    title: 'AI & Data Science Solutions',
-    description: 'Developing custom AI models for tasks like document analysis, RAG pipelines, and multi-agent LLM systems.',
+    title: 'Multi-Agent & RAG Systems',
+    description:
+      'Built intelligent multi-agent AI platforms for document processing, honey quality verification, aviation medical chatbots, and domain-specific retrieval systems.',
     icon: Cpu,
   },
   {
-    title: 'Full-Stack Web Applications',
-    description: 'Building end-to-end applications with Next.js/React, integrating features like dashboards and real-time data pipelines.',
+    title: 'Cloud & MLOps Deployment',
+    description:
+      'Deployed scalable AI microservices using FastAPI, Docker, and CI/CD pipelines across AWS, Azure, and GCP with monitoring via LangSmith, W&B, and MLflow.',
+    icon: Server,
+  },
+  {
+    title: 'Full-Stack AI Applications',
+    description:
+      'Engineered end-to-end platforms integrating React/Next.js frontends with AI-powered backends, dashboards, and real-time analytics.',
     icon: Code,
   },
 ]
@@ -73,7 +76,9 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -83,8 +88,8 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Here you would integrate a real email sending service
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Integrate real email/service here
+    await new Promise((resolve) => setTimeout(resolve, 2000))
     setIsSubmitted(true)
     setIsSubmitting(false)
   }
@@ -92,7 +97,9 @@ export default function ContactPage() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-background relative overflow-x-hidden flex items-center justify-center">
-        <div className="fixed top-0 left-0 w-full h-full -z-10"><AnimatedBackground /></div>
+        <div className="fixed top-0 left-0 w-full h-full -z-10">
+          <AnimatedBackground />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-md mx-auto text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -104,7 +111,9 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={() => setIsSubmitted(false)}>Send Another Message</Button>
-              <Button variant="outline" asChild><Link href="/">Back to Home</Link></Button>
+              <Button variant="outline" asChild>
+                <Link href="/">Back to Home</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -114,22 +123,35 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
-      <div className="fixed top-0 left-0 w-full h-full -z-10"><AnimatedBackground /></div>
+      <div className="fixed top-0 left-0 w-full h-full -z-10">
+        <AnimatedBackground />
+      </div>
       <div className="relative z-10">
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4">AI Engineer & Full-Stack Developer</Badge>
+              <Badge variant="outline" className="mb-4">
+                AI Engineer & Full-Stack Developer
+              </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 From Academia to Application
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                I&apos;m a final-year Software Engineering student passionate about building intelligent, scalable solutions. I am currently seeking a <strong>PFE internship</strong> and am also available for <strong>freelance projects</strong>.
+                I&apos;m a Software Engineer passionate about building intelligent, scalable solutions.
+                I have experience delivering production AI systems and full-stack applications. I am
+                available for <strong>full-time roles</strong>, <strong>contract</strong>, and{' '}
+                <strong>freelance projects</strong>.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
-                <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" /> 24h Response Time</Badge>
-                <Badge variant="secondary"><Calendar className="w-3 h-3 mr-1" /> Open to Opportunities</Badge>
-                <Badge variant="secondary"><MapPin className="w-3 h-3 mr-1" /> Remote Available</Badge>
+                <Badge variant="secondary">
+                  <Clock className="w-3 h-3 mr-1" /> 24h Response Time
+                </Badge>
+                <Badge variant="secondary">
+                  <Calendar className="w-3 h-3 mr-1" /> Open to Opportunities
+                </Badge>
+                <Badge variant="secondary">
+                  <MapPin className="w-3 h-3 mr-1" /> Remote Available
+                </Badge>
               </div>
             </div>
           </div>
@@ -144,43 +166,94 @@ export default function ContactPage() {
                     <CardHeader>
                       <CardTitle className="text-2xl">Send Me a Message</CardTitle>
                       <CardDescription>
-                        Have an internship, project, or question? Fill out the form below.
+                        Have a role, project, or question? Fill out the form below.
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                           <div>
-                            <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
-                            <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Your full name" />
+                            <label htmlFor="name" className="block text-sm font-medium mb-2">
+                              Full Name *
+                            </label>
+                            <Input
+                              id="name"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleInputChange}
+                              required
+                              placeholder="Your full name"
+                            />
                           </div>
                           <div>
-                            <label htmlFor="email" className="block text-sm font-medium mb-2">Email Address *</label>
-                            <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required placeholder="your.email@example.com" />
+                            <label htmlFor="email" className="block text-sm font-medium mb-2">
+                              Email Address *
+                            </label>
+                            <Input
+                              id="email"
+                              name="email"
+                              type="email"
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              required
+                              placeholder="your.email@example.com"
+                            />
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="projectType" className="block text-sm font-medium mb-2">Inquiry Type</label>
-                          <select id="projectType" name="projectType" value={formData.projectType} onChange={handleInputChange} className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent">
+                          <label htmlFor="projectType" className="block text-sm font-medium mb-2">
+                            Inquiry Type
+                          </label>
+                          <select
+                            id="projectType"
+                            name="projectType"
+                            value={formData.projectType}
+                            onChange={handleInputChange}
+                            className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                          >
                             <option value="freelance">Freelance Project Inquiry</option>
-                            <option value="internship">PFE Internship Opportunity</option>
+                            <option value="fulltime">Full-Time / Job Opportunity</option>
                             <option value="collaboration">Collaboration Proposal</option>
                             <option value="general">General Question</option>
                           </select>
                         </div>
                         <div>
-                          <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject *</label>
-                          <Input id="subject" name="subject" value={formData.subject} onChange={handleInputChange} required placeholder="Brief description of your inquiry" />
+                          <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                            Subject *
+                          </label>
+                          <Input
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleInputChange}
+                            required
+                            placeholder="Brief description of your inquiry"
+                          />
                         </div>
                         <div>
-                          <label htmlFor="message" className="block text-sm font-medium mb-2">Message *</label>
-                          <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={6} placeholder="Tell me more about the opportunity, project, timeline, etc..." />
+                          <label htmlFor="message" className="block text-sm font-medium mb-2">
+                            Message *
+                          </label>
+                          <Textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                            rows={6}
+                            placeholder="Tell me more about the opportunity, project, timeline, etc..."
+                          />
                         </div>
                         <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                           {isSubmitting ? (
-                            <><div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" /> Sending...</>
+                            <>
+                              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />{' '}
+                              Sending...
+                            </>
                           ) : (
-                            <><Send className="w-4 h-4 mr-2" /> Send Message</>
+                            <>
+                              <Send className="w-4 h-4 mr-2" /> Send Message
+                            </>
                           )}
                         </Button>
                       </form>
@@ -189,7 +262,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-8">
-                  {/* --- REDESIGNED HIRE ME CARD --- */}
+                  {/* --- Professional Profiles --- */}
                   <Card className="overflow-hidden">
                     <CardHeader className="p-0">
                       <div className="bg-muted p-4 border-b">
@@ -197,32 +270,38 @@ export default function ContactPage() {
                       </div>
                     </CardHeader>
                     <CardContent className="p-4 space-y-4">
-                      {/* Freelancer Profile */}
                       <div className="flex items-center gap-4 p-3 rounded-lg border bg-card">
-                        <Image
-                          src="https://cdn5.f-cdn.com/ppic/279372228/logo/71005125/profile_logo_71005125.jpg" // keep 'reda' image
-                          alt="Ibtissam Ech Chaibi"
-                          width={60}
-                          height={60}
-                          className="rounded-full border-2 border-primary"
-                        />
                         <div>
                           <h4 className="font-bold">IBTISSAM ECH CHAIBI</h4>
-                          <p className="text-xs text-muted-foreground">AI Engineer & Full-Stack Developer</p>
-                          <Link href="https://www.linkedin.com/in/ibtissam-ech-chaibi" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary hover:underline">
-                            View My LinkedIn
+                          <p className="text-xs text-muted-foreground">
+                            Software Engineer — AI & Full-Stack
+                          </p>
+                          <Link
+                            href="https://www.linkedin.com/in/ibtissam-ech-chaibi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-semibold text-primary hover:underline"
+                          >
+                          Hire me on freelencer.com
                           </Link>
                         </div>
                       </div>
-                      {/* Other Links */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <Button variant="outline" className="w-full justify-start" asChild>
-                          <Link href="https://linkedin.com/in/ibtissam-ech-chaibi" target="_blank" rel="noopener noreferrer">
+                          <Link
+                            href="https://linkedin.com/in/ibtissam-ech-chaibi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Linkedin className="w-4 h-4 mr-2" /> LinkedIn
                           </Link>
                         </Button>
                         <Button variant="outline" className="w-full justify-start" asChild>
-                          <Link href="https://github.com/IbtissamEchchaibi19" target="_blank" rel="noopener noreferrer">
+                          <Link
+                            href="https://github.com/IbtissamEchchaibi19"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Github className="w-4 h-4 mr-2" /> GitHub
                           </Link>
                         </Button>
@@ -230,6 +309,7 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
 
+                  {/* Contact */}
                   <Card>
                     <CardHeader>
                       <CardTitle>Contact Information</CardTitle>
@@ -237,13 +317,22 @@ export default function ContactPage() {
                     <CardContent className="space-y-4">
                       {contactMethods.map((method) => (
                         <div key={method.title} className="flex items-start">
-                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 ${method.primary ? 'bg-primary text-primary-foreground' : 'bg-muted'}`}>
+                          <div
+                            className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 ${
+                              method.primary ? 'bg-primary text-primary-foreground' : 'bg-muted'
+                            }`}
+                          >
                             <method.icon className="w-5 h-5" />
                           </div>
                           <div>
                             <h4 className="font-semibold">{method.title}</h4>
                             {method.action ? (
-                              <Link href={method.action} className="text-sm text-primary hover:underline">{method.value}</Link>
+                              <Link
+                                href={method.action}
+                                className="text-sm text-primary hover:underline"
+                              >
+                                {method.value}
+                              </Link>
                             ) : (
                               <p className="text-sm">{method.value}</p>
                             )}
@@ -253,6 +342,7 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
 
+                  {/* Expertise */}
                   <Card>
                     <CardHeader>
                       <CardTitle>Key Expertise</CardTitle>
@@ -263,13 +353,16 @@ export default function ContactPage() {
                           <service.icon className="w-5 h-5 text-primary mr-3 mt-1" />
                           <div>
                             <h4 className="font-semibold text-sm">{service.title}</h4>
-                            <p className="text-xs text-muted-foreground">{service.description}</p>
+                            <p className="text-xs text-muted-foreground">
+                              {service.description}
+                            </p>
                           </div>
                         </div>
                       ))}
                     </CardContent>
                   </Card>
 
+                  {/* Current Status */}
                   <Card>
                     <CardHeader>
                       <CardTitle>Current Status</CardTitle>
@@ -278,10 +371,12 @@ export default function ContactPage() {
                       <div className="space-y-3 text-sm">
                         <div className="flex items-center justify-between">
                           <span>Freelance Work</span>
-                          <Badge variant="default" className="text-xs bg-green-600">Available</Badge>
+                          <Badge variant="default" className="text-xs bg-green-600">
+                            Available
+                          </Badge>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span>PFE Internship</span>
+                          <span>Full-Time Role</span>
                           <Badge variant="default" className="text-xs">Actively Seeking</Badge>
                         </div>
                         <div className="flex items-center justify-between">
@@ -297,33 +392,49 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* FAQ */}
         <section className="py-16 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-center mb-12">
+                Frequently Asked Questions
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-semibold mb-2">What is your current availability?</h3>
+                  <h3 className="font-semibold mb-2">
+                    What is your current availability?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    I&apos;m currently available for new freelance projects and open to full-time or long‑term contract opportunities. I typically respond within 24 hours and can start immediately.
+                    I&apos;m currently available for new freelance projects and open to full-time
+                    or long-term contract opportunities. I typically respond within 24 hours and can
+                    start quickly.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Do you only work through Freelancer.com?</h3>
+                  <h3 className="font-semibold mb-2">
+                    Do you only work through Freelancer.com?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    While I have a strong reputation, I am open to direct collaborations and long-term contracts outside the platform.
+                    While I have a strong reputation on platforms, I am open to direct collaborations
+                    and long-term contracts outside of any marketplace.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">What technologies are you most passionate about?</h3>
+                  <h3 className="font-semibold mb-2">
+                    What technologies are you most passionate about?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    I&apos;m passionate about distributed systems, cloud-native architecture (AWS, Azure, GCP), and applying deep learning to solve real-world business problems.
+                    I&apos;m passionate about distributed systems, cloud-native architecture (AWS,
+                    Azure, GCP), and applying deep learning to solve real-world business problems.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Can you handle a project from front to back?</h3>
+                  <h3 className="font-semibold mb-2">
+                    Can you handle a project from front to back?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Yes. As a full-stack developer, I manage projects from UI/UX implementation in React/Next.js to backend and AI model integration.
+                    Yes. As a software engineer, I manage projects from UI/UX implementation in
+                    React/Next.js to backend and AI model integration into cloud deployment.
                   </p>
                 </div>
               </div>

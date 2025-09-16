@@ -19,12 +19,13 @@ import {
   Code,
   Star,
   ExternalLink,
-  Phone
+  Phone,
+  Trophy
 } from 'lucide-react'
 
 const personalInfo = {
   name: 'Ibtissam Ech-Chaibi',
-  title: 'AI Engineer focused on Generative AI, LLMs, and multi-agent systems',
+  title: 'Full Stack AI Software Engineer',
   email: 'ibtissam.echchaibi@gmail.com',
   phone: '+212610233997',
   location: 'Morocco',
@@ -32,86 +33,97 @@ const personalInfo = {
   github: 'github.com/IbtissamEchchaibi19',
 }
 
-const professionalSummary = `AI Engineer focused on Generative AI, LLMs, and multi-agent systems, skilled in RAG pipelines, fine-tuning, and agentic AI, building scalable, real-world AI solutions. Expert in developing advanced AI systems with comprehensive experience in cloud platforms, evaluation frameworks, and deployment strategies.`
+const professionalSummary = `Full Stack AI Software Engineer specializing in multi-agent systems, RAG pipelines, LLMs, and cloud-based AI solutions. Expert in building scalable AI platforms with comprehensive experience in computer vision, NLP, and end-to-end ML deployment across AWS, Azure, and GCP platforms.`
 
 const experience = [
   {
-    title: 'Applied AI & ML Engineer',
-    company: 'Fujairah Research Center',
-    location: 'UAE, Fujairah (On site)',
-    period: 'Feb 2025 - Sept 2025',
+    title: 'AI Engineer – Hack4SaferPlates Hackathon (2nd Place Winner)',
+    company: 'SFDA',
+    location: 'Riyadh, Saudi Arabia (Remote)',
+    period: 'Sept 2025',
     achievements: [
-      'Developed a multi-agent AI system for Honey Quality Verification and Beekeeper Support, integrating honey quality verification, automated document processing, and analytics dashboards',
-      'Implemented Honey Expert Agent by fine-tuning Mistral Instruct 7B on specialized honey datasets for expert knowledge retrieval, with monitoring and evaluation via Weights & Biases (W&B)',
-      'Built Honey Quality Verification Agent to automate extraction and compliance validation from lab reports using Azure Document Intelligence, deepset/roberta-base-squad2, and facebook/bart-large-mnli',
-      'Created Automated Dashboard Analytics Generation Agent to produce dashboards from production reports and invoices using Plotly, Dash, pdfplumber, and Azure Document Intelligence',
-      'Developed a RAG pipeline with LangChain, Neo4j, and LLaMA 4 for intelligent document retrieval, with evaluation and monitoring via LangSmith',
-      'Orchestrated Coordination and Deployment Agent to integrate all components into a single unified platform via multi-LLM interactions using MCP and LangGraph, deploying scalable FastAPI microservices with Docker on Azure',
+      'Contributed to the AI component of an innovative food safety platform as part of the Fujairah Research Centre team, achieving 2nd place',
+      'Developed an AI-powered PDF intelligence system to extract and verify food safety parameters and designed an ensemble-based risk prediction model with time-series features and anomaly detection',
     ],
-    technologies: ['Python', 'HuggingFace', 'LangChain', 'LangGraph', 'LangSmith', 'Pinecone', 'Azure AI', 'FastAPI', 'Docker', 'MCP', 'W&B', 'LLaMA', 'Mistral']
+    technologies: ['Python', 'Hugging Face', 'BART-large-MNLI', 'scikit-learn', 'XGBoost', 'LightGBM', 'Random Forest', 'Gradient Boosting']
   },
   {
-    title: 'Applied AI & ML Engineer',
-    company: 'Independent Consultant',
-    location: 'UAE (Remote)',
+    title: 'AI Software Engineer',
+    company: 'Fujairah Research Center',
+    location: 'United Arab Emirates (On-Site)',
+    period: 'Jan 2025 - Sept 2025',
+    achievements: [
+      'Built a multi-agent AI platform for honey quality verification, document processing, and production analytics for beekeepers and honey producers',
+      'Fine-tuned Mistral Instruct 7B on specialized datasets with W&B monitoring for expert-level knowledge retrieval',
+      'Automated compliance validation of lab reports using Azure Document Intelligence with transformer models (RoBERTa-base-SQuAD2, BART-large MNLI)',
+      'Developed a RAG pipeline with LangChain, Neo4j, and LLaMA 4, tracked with LangSmith for intelligent document retrieval',
+      'Orchestrated scalable deployment of FastAPI microservices on Azure using MCP, LangGraph, and Docker',
+    ],
+    technologies: ['Python', 'Hugging Face', 'LangChain', 'LangGraph', 'LangSmith', 'Neo4j', 'Mistral', 'LLaMA', 'Azure AI', 'Docker', 'W&B', 'Gradio', 'Dash']
+  },
+  {
+    title: 'AI Software Engineer',
+    company: 'Freelance Client',
+    location: 'United Arab Emirates (Remote)',
     period: 'Jul 2025 - Aug 2025',
     achievements: [
-      'Assisted in a consulting engagement focused on enhancing an aviation medical chatbot using Retrieval-Augmented Generation (RAG), NLP, and vector search',
-      'Contributed to system architecture design: data preprocessing (NER, synonym mapping), knowledge base structuring, and vector database integration',
-      'Built vector embeddings using domain-specific language models (BioBERT, ClinicalBERT) and integrated them into FAISS for efficient semantic search',
-      'Supported roadmap planning for testing, validation, and deployment, aligning the chatbot with aviation safety and regulatory compliance requirements',
+      'Enhanced an aviation medical chatbot for pilots and crew using RAG, NLP, LLaMA, and domain-specific embeddings (BioBERT, ClinicalBERT) integrated with Chroma for fast semantic search and compliance guidance',
+      'Designed system architecture including NER-based preprocessing, synonym mapping, and knowledge base structuring, supporting testing, validation, and deployment',
     ],
-    technologies: ['Python', 'BioBERT', 'FAISS', 'NLTK']
+    technologies: ['Python', 'LangChain', 'LLaMA', 'BioBERT', 'ClinicalBERT', 'Chroma']
   },
   {
-    title: 'Applied AI Cloud Engineer',
+    title: 'AI Software Engineer',
     company: 'Devtospace',
-    location: 'France, Paris (Remote)',
-    period: 'Oct 2024 - Dec 2024',
+    location: 'France (Remote)',
+    period: 'Sept 2024 - Dec 2024',
     achievements: [
-      'Developed a cloud-based KYC system using AI-powered computer vision and automated document processing on AWS infrastructure',
-      'Automated identity document processing with Amazon Textract, PyTorch and OpenCV to extract structured personal data and facial images',
-      'Engineered AI-driven liveness detection using Amazon Rekognition for real-time facial landmark tracking to capture authentic live user photos',
-      'Designed a Flask-based REST API with screenshot prevention and session management to enhance user security',
-      'Dockerized the complete application for consistent deployment and scalability, then deployed on AWS EC2 with Amazon S3 for secure document storage',
+      'Developed a cloud-based KYC system on AWS combining AI-powered computer vision and automated document processing',
+      'Implemented identity verification and structured data extraction from ID documents using Amazon Textract, PyTorch, and OpenCV, and engineered liveness detection with Amazon Rekognition for real-time facial tracking and anti-spoofing',
+      'Deployed the solution as a secure Flask REST API on AWS EC2 with S3 storage, Docker containerization, and CloudWatch monitoring integrated with React front-end',
     ],
-    technologies: ['PyTorch', 'OpenCV', 'Amazon Rekognition', 'Amazon Textract', 'Amazon S3', 'Flask', 'Docker', 'AWS EC2', 'AWS CloudWatch']
+    technologies: ['PyTorch', 'OpenCV', 'Amazon Rekognition', 'Amazon Textract', 'Amazon S3', 'Flask', 'Docker', 'MongoDB', 'AWS EC2', 'AWS CloudWatch', 'React']
   },
   {
-    title: 'Applied AI Engineer Intern',
+    title: 'AI Software Engineer - Internship',
     company: '3D Smart Factory',
-    location: 'Morocco, Mohammedia',
-    period: 'Jul 2024 - Sept 2024',
+    location: 'Morocco (Hybrid)',
+    period: 'Jun 2024 - Sept 2024',
     achievements: [
-      'Engineered a RAG-powered AI platform using LangChain with Google Gemini to provide personalized interview coaching, CV insights, and auto-generated application letters',
-      'Developed NLP pipelines using NLTK and Hugging Face Transformers for semantic search, entity extraction, and intelligent document understanding',
-      'Integrated vector search with Pinecone for fast and accurate document indexing and retrieval',
-      'Designed a context-aware conversational agent that generates user-specific responses by retrieving relevant chunks from resume embeddings',
-      'Implemented a job market intelligence module combining Google News and Job Search APIs to extract labor trends and power adaptive job recommendations',
-      'Built a robust backend with FastAPI, exposing RESTful endpoints, then containerized the application using Docker and deployed services to AWS',
-      'RAG evaluation and performance monitoring using LangSmith to track retrieval accuracy, conversational quality, and system performance',
+      'Engineered a RAG-powered platform with LangChain and Google Gemini for personalized interview coaching and CV analysis, supported by NLP pipelines with NLTK and Hugging Face for semantic search and intelligent document understanding',
+      'Integrated Pinecone for fast vector search and context-aware responses, and developed a job intelligence module using Google APIs to provide real-time market insights and adaptive job recommendations',
+      'Deployed a containerized FastAPI backend with MongoDB on AWS using Docker, ensuring robust monitoring with LangSmith integrated with React front-end',
     ],
-    technologies: ['LangChain', 'Gemini Pro Vision', 'NLTK', 'SpaCy', 'Transformers', 'Pinecone', 'FastAPI', 'MongoDB', 'AWS', 'Google APIs', 'Docker', 'LangSmith']
+    technologies: ['LangChain', 'Gemini Pro Vision', 'NLTK', 'SpaCy', 'Transformers', 'Pinecone', 'FastAPI', 'MongoDB', 'AWS', 'Google APIs', 'Docker', 'LangSmith', 'React']
   },
   {
-    title: 'Data Scientist Hackathon Participant',
-    company: 'Leyton',
-    location: 'Morocco, Casablanca',
-    period: 'Mar 2024 - Mar 2024',
+    title: 'ML Software Engineer - Internship',
+    company: 'Technocolabs Softwares',
+    location: 'India (Remote)',
+    period: 'May 2024 - Jun 2024',
     achievements: [
-      'Engineered a Smart Retrieval System that efficiently extracts and interacts with text and images from PDFs, delivering valuable R&D insights',
-      'Developed a comprehensive document analysis tool leveraging LlamaIndex and Llama 2, enabling users to query content, generate summaries, and auto-create detailed Word reports',
-      'Centralized all functionalities by designing an intuitive, user-friendly interface using Streamlit',
+      'Engineered a Python-based ML system for automated mortgage approval and prepayment risk assessment, leveraging statistical modeling and advanced analytics to evaluate borrower profiles and financial patterns',
+      'Created visualizations with Matplotlib and Seaborn to highlight key risk factors and deployed a Flask web app with interactive dashboards for real-time predictions',
     ],
-    technologies: ['Python', 'LlamaIndex', 'LLM (Llama 2)', 'ChromaDB', 'Streamlit']
+    technologies: ['Python', 'pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'scikit-learn', 'Flask']
+  },
+  {
+    title: 'Software Engineer - Internship',
+    company: 'DigitalSky',
+    location: 'Morocco (Hybrid)',
+    period: 'Jun 2023 - Aug 2023',
+    achievements: [
+      'Built a project management web application with React and Express.js, implementing JWT authentication and role-based dashboards for secure task management, with MongoDB integration for real-time metrics and analytics',
+    ],
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Docker']
   },
 ]
 
 const education = [
   {
-    degree: 'Engineering degree, software engineering and digitalization',
-    school: 'National High School of Electricity and Mechanics (ENSEM)',
-    location: 'Morocco',
+    degree: 'Engineering degree, software engineering and digitalisation',
+    school: 'ENSEM Engineering School',
+    location: 'Morocco, Casablanca',
     period: 'Sept 2022 - Jun 2025',
     details: [
       'Software Engineering and Digitalization specialization',
@@ -120,10 +132,10 @@ const education = [
     ],
   },
   {
-    degree: 'Diploma for Admission to National Engineering Schools',
-    school: 'Preparatory Classes for Major Engineering Schools (CPGE)',
-    location: 'Morocco',
-    period: 'Sept 2020 - Jun 2022',
+    degree: 'Mathematics and Physics Diploma for Admission to National Engineering Schools',
+    school: 'CPGE Preparatory Classes',
+    location: 'Morocco, Taza',
+    period: 'Sept 2020 - Jul 2022',
     details: [
       'Preparatory program for engineering schools',
       'Strong foundation in mathematics and science fundamentals',
@@ -133,50 +145,36 @@ const education = [
 ]
 
 const skills = {
-  'Programming & Scripting': [
-    'Python', 'JavaScript', 'Node.js', 'SQL'
+  'Software & Data Science': [
+    'Python', 'Flask', 'FastAPI', 'JavaScript', 'React', 'Node.js', 'Dash', 'Streamlit', 'NumPy', 'Pandas', 'SQL', 'Matplotlib', 'Scikit-learn', 'NLTK', 'SpaCy', 'OpenCV'
   ],
-  'Data Preparation & Augmentation': [
-    'pandas', 'NumPy', 'NLTK', 'spaCy', 'regex', 'NLPAug', 'BeautifulSoup', 'OpenCV'
+  'AI & ML Frameworks & LLMs': [
+    'PyTorch', 'TensorFlow', 'Hugging Face', 'LangChain', 'LangGraph', 'CrewAI', 'LlamaIndex', 'MCP', 'GPTs', 'LLaMA', 'Mistral', 'DeepSeek', 'Qwen', 'Gemini'
   ],
-  'Databases & Vector Stores': [
-    'MongoDB', 'PostgreSQL', 'MySQL', 'Weaviate', 'Pinecone', 'ChromaDB', 'FAISS', 'Elasticsearch'
+  'Databases & Cloud': [
+    'MongoDB', 'PostgreSQL', 'Weaviate', 'Pinecone', 'ChromaDB', 'Neo4j', 'AWS (SageMaker, Textract, Rekognition, Comprehend, OpenSearch)', 'Azure (Document Intelligence, OpenAI Service, Blob Storage, VMs)', 'GCP (Vertex AI, Speech-to-Text/Text-to-Speech)'
   ],
-  'AI Development Tools': [
-    'PyTorch', 'TensorFlow', 'Hugging Face Transformers', 'LangChain', 'LangGraph', 'CrewAI', 'LlamaIndex', 'LLMs (LLaMA, Mistral, DeepSeek, Qwen)', 'MCP'
-  ],
-  'Cloud AI Solutions': [
-    'AWS (SageMaker, Transcribe, Lex, Rekognition, Comprehend, Textract, CloudWatch, OpenSearch)', 
-    'Azure (Document Intelligence, OpenAI Service, Blob Storage)', 
-    'GCP (Google AI Studio, Vertex AI, Gemini, Gamma, Speech-to-Text, Dialogflow)'
-  ],
-  'Evaluation, Monitoring & Versioning': [
-    'LangSmith', 'Weights & Biases (W&B)', 'MLflow', 'scikit-learn'
-  ],
-  'Deployment & Prototyping': [
-    'AWS EC2', 'Docker', 'FastAPI', 'Flask', 'Hugging Face Inference', 'Streamlit', 'Gradio', 'React', 'Dash'
-  ],
-  'Tools & Platforms': [
-    'Git/GitHub', 'Jupyter Notebook', 'VS Code', 'GitHub Copilot', 'GitHub MCP', 'n8n', 'Anaconda Prompt', 'Windows Terminal', 'Cursor'
+  'Deployment & MLOps': [
+    'Git', 'Docker', 'AWS EC2', 'Google App Engine', 'Hugging Face Inference', 'LangSmith', 'Weights & Biases', 'MLflow'
   ],
 }
 
 const projects = [
   'Email Assistant Agent – Developed an autonomous email assistant using LangGraph Google\'s Gemini AI model to triage messages, draft responses, and schedule meetings with Gmail/Calendar APIs. Integrated LangSmith for observability, memory persistence, and workflow optimization.',
-  'GitHub MCP Tools Agent – Engineered an intelligent interface with LangGraph and LLaMA 3.3 to automate GitHub MCP operations via semantic search, parameter collection, and tool execution. Deployed with Docker MCP Toolkits and monitored through LangSmith.',
-  'AI-Powered Podcast Knowledge Extraction Platform – Built an end-to-end system using AWS Transcribe, Comprehend, OpenSearch, SageMaker, CrewAI, and DeepSeek LLMs to convert podcasts into structured, searchable insights with automated evaluation and visualization.',
-  'Generative AI Personalized Learning Platform – Built an adaptive English learning system using Qwen LLM on Vertex AI, RLHF for dynamic difficulty adjustment, Google Speech-to-Text/Text-to-Speech for interactive voice feedback, and ElasticSearch for fast retrieval and learner progress analytics.',
+  'GitHub MCP Tools Agent – Engineered an intelligent interface with LangGraph and LLaMA 3.3 to automate GitHub MCP operations via semantic search, parameter collection, and tool execution using Weaviate database. Deployed with Docker MCP Toolkits and monitored through LangSmith.',
+  'AI-Powered Podcast Platform – Built an end-to-end system using AWS Transcribe, Comprehend, OpenSearch, SageMaker, CrewAI, and DeepSeek to convert podcasts into structured, searchable insights. Implemented automated evaluation pipelines and visualization dashboards.',
+  'Generative AI Learning Platform – Built an adaptive English learning system using Qwen LLM on Vertex AI, RLHF for dynamic difficulty adjustment, Google Speech-to-Text/Text-to-Speech for interactive voice feedback, and ElasticSearch for fast retrieval and learner progress analytics.',
 ]
 
 const languages = [
   'Arabic (Native)',
-  'French (Working proficiency)', 
-  'English (Working proficiency)'
+  'French (Working Proficiency)', 
+  'English (Working Proficiency)'
 ]
 
 export default function ResumePage() {
   useEffect(() => {
-    document.title = 'Resume | Ibtissam Ech-Chaibi - AI Engineer'
+    document.title = 'Resume | Ibtissam Ech-Chaibi - Full Stack AI Software Engineer'
   }, [])
 
   return (
@@ -262,6 +260,15 @@ export default function ResumePage() {
               <div className="relative pl-4 sm:pl-6 before:content-[''] before:absolute before:top-0 before:left-1 before:w-px before:h-full before:bg-border">
                 {experience.map((job, index) => (
                   <div key={index} className="relative pb-10 last:pb-0 pl-2 sm:pl-1">
+                    {/* Special badge for hackathon win */}
+                    {job.title.includes('2nd Place Winner') && (
+                      <div className="mb-2">
+                        <Badge className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs">
+                          <Trophy className="w-3 h-3 mr-1" />
+                          2nd Place Winner
+                        </Badge>
+                      </div>
+                    )}
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                       <div>
                         <h4 className="text-lg font-semibold text-foreground">{job.title}</h4>
@@ -336,7 +343,7 @@ export default function ResumePage() {
             <section className="mb-10">
               <h3 className="text-xl font-bold text-foreground mb-6 flex items-center">
                 <Code className="w-5 h-5 mr-2 text-primary" />
-                Skills
+                Technical Skills
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {Object.entries(skills).map(([category, skillList]) => (
