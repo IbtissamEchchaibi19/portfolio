@@ -9,329 +9,283 @@ import { ExternalLink, Github, Calendar, Clock, Code, Brain, Database, Cpu, Rock
 import { AnimatedBackground } from '@/components/3d/animated-background'
 
 export const metadata: Metadata = {
-  title: 'Projects | Reda El Hadfi - AI Architect & Full-Stack Engineer',
-  description: 'Explore my portfolio of AI and full-stack development projects, showcasing innovative solutions and technical excellence.',
+  title: 'Projects |Ibtissam Ech-Chaibi -- Full-Stack AI Software Engineer',
+  description: 'Explore my portfolio of AI, full-stack development, and cloud services, showcasing innovative solutions and technical excellence, and demonstrating efficient project deployment'
 }
 
 const projects = [
-   {
-  id: 'food-honey-verification-api',
-  title: 'Food & Honey Quality Verification API',
-  description: 'Prototype API built with FastAPI for automated document verification and compliance certification. Delivered for two clients with different purposes: honey quality verification against GCC honey standards, and food safety verification against SFDA standards. The system integrates Azure Document Intelligence for OCR, HuggingFace NLP models (BART-Large-MNLI, RoBERTa) for compliance verification, and a modular rules engine. While final production systems remain private, this prototype demonstrates a flexible architecture that can be adapted to any verification scenario by changing only the compliance standards or model purpose and the api can be adapted and integrate to any frontend.',
-  image: null,
-  imageGradient: 'from-amber-500 to-yellow-600',
-  tags: [
-    'FastAPI',
-    'Docker',
-    'Azure Document Intelligence',
-    'HuggingFace Transformers',
-    'PyTorch',
-    'BART-Large-MNLI',
-    'RoBERTa QA',
-    'PDF Processing',
-    'Compliance Verification'
-  ],
-  category: 'Document Verification & Compliance',
-  status: 'Prototype',
-  timeline: '2 months',
-  year: '2025',
-  client: 'Private (2 clients)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/qualityapi/tree/master' },
-    { type: 'demo', url: 'https://vimeo.com/1117823921?share=copy'},
-    { type: 'demo 2', url: 'https://vimeo.com/1117823921?share=copy'},
-  ],
-},
-{
-  id: 'document-analytics-api',
-  title: 'Document Analytics & Visualization API',
-  description: 'Prototype API built with FastAPI for automated extraction, processing, and analytics from PDFs and documents. Implemented for a client with use cases including invoices, honey production reports, and hive tracking dashboards. The system integrates PyMuPDF and Camelot for PDF intelligence, regex-based pattern extraction, and Plotly Dash for interactive, real-time visualizations. While the final production system remains private, this prototype demonstrates how documents can serve as flexible data sources for generating analytics and insights, and it can be adapted to any reporting or visualization scenario by adjusting extraction logic and business rules.',
-  image: null,
-  imageGradient: 'from-emerald-500 to-cyan-600',
-  tags: [
-    'FastAPI',
-    'Docker',
-    'PyMuPDF',
-    'Camelot',
-    'Plotly Dash',
-    'Azure Blob Storage',
-    'Regex Extraction',
-    'Document Intelligence',
-    'Business Analytics'
-  ],
-  category: 'Document Intelligence & Analytics',
-  status: 'Prototype',
-  timeline: '2 months',
-  year: '2025',
-  client: 'Private (Invoice & Honey Producer Client)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/invoicesdashapi/blob/master' },
-    { type: 'demo', url: 'https://vimeo.com/1117865542?share=copy' }
-  ],
-}
-,
-{
-  id: 'rag-beekeeping-expert',
-  title: 'RAG-Powered Expert System & Evaluation Framework',
-  description: 'Prototype enterprise-grade Retrieval-Augmented Generation (RAG) system built with Python, LangChain, Pinecone, and Groq for domain-specific expert guidance. Initially designed for professional apiculture use cases, the system integrates semantic vector search, contextual conversational memory, and a comprehensive evaluation framework for accuracy, relevance, and hallucination detection. This repository showcases only a prototype with fake data; the exact architecture and real client datasets remain private. The goal is to demonstrate the capabilities and power of advanced RAG systems. The same architecture can be adapted to any domain requiring document-grounded verification, expert assistance, or compliance-based Q&A by simply changing the knowledge base and evaluation criteria.',
-  image: null,
-  imageGradient: 'from-amber-500 to-yellow-600',
-  tags: [
-    'LangChain',
-    'FastAPI',
-    'Pinecone',
-    'Groq',
-    'HuggingFace Embeddings',
-    'Gradio',
-    'RAG Evaluation',
-    'Vector Search',
-    'LLM Integration'
-  ],
-  category: 'Retrieval-Augmented Generation & Expert Systems',
-  status: 'Prototype',
-  timeline: '5 months',
-  year: '2025',
-  client: 'Private (Beekeeping & Knowledge Management)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/beekeepchatbot' },
-    { type: 'demo', url: 'https://www.loom.com/share/4bdcc5864fa84e80a6b863e23876e9b3?sid=db383b17-768d-49de-b7dc-8f36b260df0a' }
-  ],
-},
-{
-  id: 'graph-rag-lab-reports',
-  title: 'GraphRAG Document Analysis & Query System',
-  description: 'Prototype enterprise-grade GraphRAG (Graph-based Retrieval-Augmented Generation) system built with Python, Streamlit, Neo4j, and Google Gemini for intelligent laboratory report analysis. This prototype demonstrates how knowledge graphs, semantic search, and AI-driven response generation can be combined for advanced document intelligence. The showcased version uses only fake/sample data; the exact architecture and real project remain private for clients. The framework can be adapted to any type of technical documentation or compliance-based reports by simply changing the document sources and domain standards.',
-  image: null,
-  imageGradient: 'from-cyan-600 to-blue-700',
-  tags: [
-    'GraphRAG',
-    'Neo4j',
-    'Streamlit',
-    'Google Gemini',
-    'SentenceTransformers',
-    'Knowledge Graphs',
-    'Semantic Search',
-    'Document Intelligence'
-  ],
-  category: 'Graph-Based RAG & Document Analysis',
-  status: 'Prototype',
-  timeline: '4 months',
-  year: '2025',
-  client: 'Private (Laboratory & Technical Documentation)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/GraphRAG-Retreving-Reports/tree/master' },
-    { type: 'demo', url: 'https://vimeo.com/manage/videos/1118154921' }
-  ],
-},
-{
-  id: 'mistral-7b-beekeeping-finetune',
-  title: 'Mistral-7B Domain Fine-Tuning System (Beekeeping Prototype)',
-  description: 'Prototype enterprise-grade fine-tuning pipeline demonstrating specialization of Mistral-7B on beekeeping domain knowledge using QLoRA. This system showcases memory-efficient fine-tuning, automated dataset processing, and comprehensive evaluation metrics. All data used is synthetic/fake; the actual client project and model weights remain private. The framework can be adapted to any domain or document source for domain-specific language model training.',
-  image: null,
-  imageGradient: 'from-yellow-400 to-orange-600',
-  tags: [
-    'Mistral-7B',
-    'QLoRA',
-    'Fine-Tuning',
-    'Lightning AI',
-    'Weights & Biases',
-    'Domain Adaptation',
-    'PDF Processing',
-    'AI Evaluation Metrics'
-  ],
-  category: 'Domain-Specific LLM Fine-Tuning',
-  status: 'Prototype',
-  timeline: '3 months',
-  year: '2025',
-  client: 'Private (Beekeeping & Domain Knowledge)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/FineTuningLLM/tree/master' }
-  ],
-},
-{
-  id: 'ai-gmail-email-assistant',
-  title: 'AI-Powered Gmail Email Assistant (Prototype)',
-  description: 'Intelligent email assistant demonstrating autonomous Gmail triage, response drafting, meeting scheduling, and inbox management using AI. Built with LangGraph for workflow orchestration and Google Gemini 2.5 as the core LLM. The system showcases advanced agent patterns, persistent memory, and human-in-the-loop supervision. This is a prototype/demo; no live client data is used.',
-  image: null,
-  imageGradient: 'from-blue-400 to-indigo-600',
-  tags: [
-    'LangGraph',
-    'LangChain',
-    'Google Gemini',
-    'Gmail API',
-    'AI Agents',
-    'Human-in-the-Loop',
-    'Workflow Orchestration',
-    'Persistent Memory'
-  ],
-  category: 'Autonomous AI Agent Systems',
-  status: 'Prototype',
-  timeline: '2 months',
-  year: '2025',
-  client: 'Demo/Prototype',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Email-Assistance-Agent/blob/master' },
-    { type: 'demo', url: 'https://vimeo.com/1111290857?share=copy' }
-  ],
-},
-{
-  id: 'github-mcp-tools-agent',
-  title: 'GitHub MCP Tools Agent (Prototype)',
-  description: 'Intelligent conversational agent bridging natural language queries with GitHub\'s Model Context Protocol (MCP) server. Enables tool discovery, configuration, and execution through an intuitive chat interface powered by LangGraph, Llama 3.3 70B, and a hybrid vector database. Demonstrates advanced semantic search, multi-turn conversations, and workflow orchestration. Prototype/demo with no live client data.',
-  image: null,
-  imageGradient: 'from-purple-500 to-pink-600',
-  tags: [
-    'LangGraph',
-    'Llama 3.3',
-    'Weaviate',
-    'GitHub MCP',
-    'Docker',
-    'Semantic Search',
-    'AI Agents',
-    'Vector Database'
-  ],
-  category: 'Autonomous AI Agent Systems',
-  status: 'Prototype',
-  timeline: '2 months',
-  year: '2025',
-  client: 'Demo/Prototype',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/master' },
-    { type: 'demo', url: 'https://vimeo.com/1118396656?share=copy' }
-  ],
-},
-{
-  id: 'wastewater-surveillance-ai',
-  title: 'Wastewater Surveillance AI System',
-  description: 'AI-powered system for real-time monitoring of pathogens and mycotoxins in wastewater, integrating machine learning for outbreak prediction, risk assessment, and interactive dashboard visualization. Developed as part of the SDFA Hackathon, featuring ensemble predictive models, anomaly detection, environmental intelligence, and real-time alerting for public health protection.',
-  image: null,
-  imageGradient: 'from-teal-500 to-blue-600',
-  tags: [
-    'Python',
-    'Streamlit',
-    'Scikit-learn',
-    'XGBoost',
-    'LightGBM',
-    'Plotly',
-    'Time Series',
-    'Machine Learning',
-    'Dashboard'
-  ],
-  category: 'Environmental AI Systems',
-  status: 'Prototype',
-  timeline: '3 months',
-  year: '2025',
-  client: 'SDFA Hackathon',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Wastewater-Surveillance-AI-System/blob/master' },
-    { type: 'demo', url: 'https://vimeo.com/1117814824?share=copy' }
-  ],
-},
-{
-  id: 'thiqah-foods-ai',
-  title: 'Thiqah Foods AI - Risk Prediction System',
-  description: 'AI-powered food safety monitoring platform for the Saudi Arabian food industry, providing real-time risk scoring, predictive analytics, and interactive dashboards. Developed as part of the SDFA Hackathon, the system integrates ensemble machine learning models, multi-factor environmental and supply chain data, and bilingual dashboard support for proactive risk management.',
-  image: null,
-  imageGradient: 'from-orange-500 to-red-600',
-  tags: [
-    'Python',
-    'Streamlit',
-    'Scikit-learn',
-    'XGBoost',
-    'LightGBM',
-    'Plotly',
-    'Machine Learning',
-    'Dashboard',
-    'Risk Prediction'
-  ],
-  category: 'Food Safety AI Systems',
-  status: 'Prototype',
-  timeline: '2 months',
-  year: '2025',
-  client: 'SDFA Hackathon',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Thiqah-Foods-AI/tree/master' },
-    { type: 'demo', url: 'https://vimeo.com/1118413096?share=copy' }
-  ],
-},
-{
-  id: 'ai-resume-assistant',
-  title: 'AI-Powered Resume Assistant (Prototype)',
-  description: 'Prototype platform built with FastAPI and React to showcase AI-driven career support. It analyzes resumes, generates tailored interview questions, creates job-specific cover letters, and delivers real-time job market insights. Powered by Google Gemini, LangChain, and MongoDB with RAG-based semantic search. This prototype uses only fake/demo data; the full architecture and real data are conserved privately for clients.',
-  image: null,
-  imageGradient: 'from-green-500 to-blue-600',
-  tags: [
-    'Python',
-    'FastAPI',
-    'React',
-    'LangChain',
-    'Google Gemini',
-    'MongoDB',
-    'Pinecone',
-    'RAG Systems',
-    'Career AI'
-  ],
-  category: 'Career Intelligence Systems',
-  status: 'Prototype',
-  timeline: '3 months',
-  year: '2025',
-  client: 'Private (Prototype Showcase)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/JobSeeker/blob/main' },
-    { type: 'demo', url: 'https://vimeo.com/1118414850?share=copy' }
-  ],
-},
-{
-  id: 'facial-verification-system',
-  title: 'Facial Recognition & Identity Verification System (Prototype)',
-  description: 'Prototype platform built with Python Flask, PyTorch, OpenCV, and AWS Textract to demonstrate biometric identity verification. The system combines facial recognition, document analysis, and cross-modal identity validation through a RAG-inspired verification workflow. Features include facial similarity scoring with FaceNet embeddings, OCR-based ID processing, cross-verification between selfies/screenshots/documents, and secure data management with MongoDB and AWS S3. This prototype showcases the core capabilities using only fake/demo data — the production architecture and real data remain private for clients.',
-  image: null,
-  imageGradient: 'from-purple-600 to-indigo-700',
-  tags: [
-    'Python',
-    'Flask',
-    'PyTorch',
-    'OpenCV',
-    'dlib',
-    'AWS Textract',
-    'MongoDB',
-    'Amazon S3',
-    'JWT Authentication',
-    'Biometric Systems'
-  ],
-  category: 'Identity Verification Systems',
-  status: 'Prototype',
-  timeline: '4 months',
-  year: '2025',
-  client: 'Private (Prototype Showcase)',
-  featured: true,
-  links: [
-    { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/kyc-api/blob/main/' },
-    { type: 'demo', url: 'https://www.loom.com/share/10dbf7e324724eecaeb4fbfe86bb88dc?sid=b461ea41-88df-4542-abc6-0d7c18513bb1' }
-  ],
-}
-
-
-
-
-
-
-
+  {
+    id: 'verification-api',
+    title: 'Document Verification API',
+    description: 'An end-to-end API designed with FastAPI for automated document verification and compliance checks. Combines Azure Document Intelligence for OCR, HuggingFace NLP models (BART-Large-MNLI, RoBERTa) for semantic validation, and a modular rules engine for flexible verification workflows.',
+    image: null,
+    imageGradient: 'from-amber-500 to-yellow-600',
+    tags: ['FastAPI', 'Docker', 'Azure Document Intelligence', 'HuggingFace Transformers', 'PyTorch', 'BART-Large-MNLI', 'RoBERTa QA', 'PDF Processing'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '1 months',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/qualityapi/tree/master' },
+      { type: 'demo', url: 'https://vimeo.com/1117823921?share=copy' }
+    ],
+  },
+  {
+    id: 'document-analytics-api',
+    title: 'Document Analytics & Visualization API',
+    description: 'Built with FastAPI and integrated with PyMuPDF, Camelot, and regex pipelines to extract, process, and analyze data from PDFs. Features a Plotly Dash dashboard for real-time visualization, enabling insights generation and automated reporting from structured and unstructured documents.',
+    image: null,
+    imageGradient: 'from-emerald-500 to-cyan-600',
+    tags: ['FastAPI', 'Docker', 'PyMuPDF', 'Camelot', 'Plotly Dash', 'Azure Blob Storage', 'Regex Extraction', 'Document Intelligence'],
+    category: 'Full-Stack',
+    status: 'Completed',
+    timeline: '1 months',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/invoicesdashapi/blob/master' },
+      { type: 'demo', url: 'https://vimeo.com/1117865542?share=copy' }
+    ],
+  },
+  {
+    id: 'rag-expert-system',
+    title: 'RAG-Powered Expert System',
+    description: 'Engineered a Retrieval-Augmented Generation (RAG) pipeline using LangChain, Pinecone, Groq, and HuggingFace embeddings. Includes semantic vector search, contextual conversational memory, and an evaluation framework for relevance, accuracy, and hallucination detection.',
+    image: null,
+    imageGradient: 'from-amber-500 to-yellow-600',
+    tags: ['LangChain', 'FastAPI', 'Pinecone', 'Groq', 'HuggingFace Embeddings', 'Gradio', 'RAG Evaluation', 'Vector Search'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '2 months',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/beekeepchatbot' },
+      { type: 'demo', url: 'https://www.loom.com/share/4bdcc5864fa84e80a6b863e23876e9b3?sid=db383b17-768d-49de-b7dc-8f36b260df0a' }
+    ],
+  },
+  {
+    id: 'graph-rag-system',
+    title: 'GraphRAG Query System',
+    description: 'Developed a document intelligence system integrating Neo4j for knowledge graphs, SentenceTransformers for semantic embeddings, and Google Gemini for response generation. Features Streamlit-based visualization, enabling graph-structured exploration of documents and advanced Q&A over structured data.',
+    image: null,
+    imageGradient: 'from-cyan-600 to-blue-700',
+    tags: ['GraphRAG', 'Neo4j', 'Streamlit', 'Google Gemini', 'SentenceTransformers', 'Knowledge Graphs', 'Semantic Search', 'Document Intelligence'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '2 months',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/GraphRAG-Retreving-Reports/tree/master' },
+      { type: 'demo', url: 'https://vimeo.com/manage/videos/1118154921' }
+    ],
+  },
+  {
+    id: 'mistral-7b-finetune',
+    title: 'Mistral-7B Fine-Tuning Pipeline',
+    description: 'Implemented a fine-tuning framework for Mistral-7B using QLoRA for memory efficiency. Includes automated dataset preparation, low-rank adaptation, and evaluation metrics integrated with Weights & Biases. Demonstrates scalable domain-specific language model adaptation on commodity hardware.',
+    image: null,
+    imageGradient: 'from-yellow-400 to-orange-600',
+    tags: ['Mistral-7B', 'QLoRA', 'Fine-Tuning', 'Lightning AI', 'Weights & Biases', 'Domain Adaptation', 'PDF Processing', 'AI Evaluation Metrics'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '1 months',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/FineTuningLLM/tree/master' }
+    ],
+  },
+  {
+    id: 'ai-gmail-assistant',
+    title: 'AI-Powered Email Assistant',
+    description: 'Designed an intelligent email assistant capable of autonomous triage, drafting responses, scheduling meetings, and inbox management. Built with LangGraph for agent orchestration, Google Gemini 2.5 as the core LLM, and persistent memory for long-term context handling.',
+    image: null,
+    imageGradient: 'from-blue-400 to-indigo-600',
+    tags: ['LangGraph', 'LangChain', 'Google Gemini', 'Gmail API', 'AI Agents', 'Human-in-the-Loop', 'Workflow Orchestration', 'Persistent Memory'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '2 weeks',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Email-Assistance-Agent/blob/master' },
+      { type: 'demo', url: 'https://vimeo.com/1111290857?share=copy' }
+    ],
+  },
+  {
+    id: 'github-mcp-agent',
+    title: 'GitHub MCP Agent',
+    description: 'Built a conversational AI agent integrating with GitHub\'s Model Context Protocol (MCP). Allows tool discovery, configuration, and execution through natural language queries. Powered by LangGraph orchestration, Llama 3.3 70B, and Weaviate for hybrid semantic search.',
+    image: null,
+    imageGradient: 'from-purple-500 to-pink-600',
+    tags: ['LangGraph', 'Llama 3.3', 'Weaviate', 'GitHub MCP', 'Docker', 'Semantic Search', 'AI Agents', 'Vector Database'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '2 weeks',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/master' },
+      { type: 'demo', url: 'https://vimeo.com/1118396656?share=copy' }
+    ],
+  },
+  {
+    id: 'environmental-surveillance-ai',
+    title: 'Real-Time Surveillance AI System',
+    description: 'Developed a real-time monitoring system with anomaly detection, ensemble ML models (XGBoost, LightGBM), and time-series forecasting. Features interactive dashboards with Plotly and Streamlit, real-time alerting, and predictive analytics for trend detection and risk modeling.',
+    image: null,
+    imageGradient: 'from-teal-500 to-blue-600',
+    tags: ['Python', 'Streamlit', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Plotly', 'Time Series', 'Machine Learning', 'Dashboard'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '1 week',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Wastewater-Surveillance-AI-System/blob/master' },
+      { type: 'demo', url: 'https://vimeo.com/1117814824?share=copy' }
+    ],
+  },
+  {
+    id: 'risk-prediction-ai',
+    title: 'AI Risk Prediction System',
+    description: 'Implemented a risk prediction engine combining ensemble ML models, multi-factor data analysis, and bilingual dashboards. Provides proactive monitoring with dynamic scoring, visualization, and insights for early decision-making and risk management.',
+    image: null,
+    imageGradient: 'from-orange-500 to-red-600',
+    tags: ['Python', 'Streamlit', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Plotly', 'Machine Learning', 'Dashboard', 'Risk Prediction'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '1 week',
+    year: '2025',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Thiqah-Foods-AI/tree/master' },
+      { type: 'demo', url: 'https://vimeo.com/1118413096?share=copy' }
+    ],
+  },
+  {
+    id: 'ai-resume-assistant',
+    title: 'AI Resume Assistant',
+    description: 'Created an AI assistant for career support with FastAPI and React. Features resume analysis, job-specific cover letter generation, tailored interview questions, and RAG-based job insights retrieval using LangChain, Google Gemini, and MongoDB.',
+    image: null,
+    imageGradient: 'from-green-500 to-blue-600',
+    tags: ['Python', 'FastAPI', 'React', 'LangChain', 'Google Gemini', 'MongoDB', 'Pinecone', 'RAG Systems', 'Career AI'],
+    category: 'Full-Stack',
+    status: 'Completed',
+    timeline: '1 months',
+    year: '2024',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/JobSeeker/blob/main' },
+      { type: 'demo', url: 'https://vimeo.com/1118414850?share=copy' }
+    ],
+  },
+  {
+    id: 'facial-verification-system',
+    title: 'Facial Recognition & Identity Verification',
+    description: 'Built a biometric verification system integrating FaceNet embeddings for facial recognition, AWS Textract for OCR, and Flask APIs for deployment. Includes image–document cross-validation, JWT-based authentication, MongoDB for secure storage, and AWS S3 for media handling.',
+    image: null,
+    imageGradient: 'from-purple-600 to-indigo-700',
+    tags: ['Python', 'Flask','React','PyTorch', 'OpenCV', 'dlib', 'AWS Textract', 'MongoDB', 'Amazon S3', 'JWT Authentication', 'Biometric Systems'],
+    category: 'Full-Stack',
+    status: 'Completed',
+    timeline: '1 months',
+    year: '2024',
+    client: 'Independent Project',
+    featured: true,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/kyc-api/blob/main/' },
+      { type: 'demo', url: 'https://www.loom.com/share/10dbf7e324724eecaeb4fbfe86bb88dc?sid=b461ea41-88df-4542-abc6-0d7c18513bb1' }
+    ],
+  },
+  {
+    id: 'podcast-platform',
+    title: 'AI-Powered Podcast Platform',
+    description: 'Built an end-to-end system using AWS Transcribe, Comprehend, OpenSearch, SageMaker, CrewAI, and DeepSeek to convert podcasts into structured, searchable insights. Implemented automated evaluation pipelines and visualization dashboards for real-time analysis.',
+    image: null,
+    imageGradient: 'from-pink-500 to-red-600',
+    tags: ['AWS Transcribe', 'AWS Comprehend', 'OpenSearch', 'SageMaker', 'CrewAI', 'DeepSeek', 'NLP', 'Speech-to-Text', 'Podcast Analytics'],
+    category: 'Cloud',
+    status: 'Completed',
+    timeline: ' 2 weeks',
+    year: '2025',
+    client: 'Independent Project',
+    featured: false,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Podcast-Platform' }
+    ],
+  },
+  {
+    id: 'genai-learning-platform',
+    title: 'Generative AI Learning Platform',
+    description: 'Developed an adaptive English learning prototype leveraging Qwen LLM on Vertex AI with RLHF. Integrated Google Speech APIs for interactive voice-based learning, real-time assessment, and dynamic content generation pipelines for personalized learning paths.',
+    image: null,
+    imageGradient: 'from-indigo-500 to-blue-600',
+    tags: ['Qwen LLM', 'RLHF', 'Google Speech APIs', 'Vertex AI', 'Generative AI', 'Adaptive Learning', 'NLP', 'Speech Recognition'],
+    category: 'Cloud',
+    status: 'Completed',
+    timeline: '2 weeks',
+    year: '2025',
+    client: 'Independent Project',
+    featured: false,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/GenAI-Learning-Platform' }
+    ],
+  },
+  {
+    id: 'crop-disease-chatbot',
+    title: 'Crop Disease Detection & Advisory Chatbot',
+    description: 'Developed an AI-powered system to detect crop conditions from images and provide advisory guidance. Utilizes OpenCV and TensorFlow for image analysis, spaCy for generating contextual recommendations, and integrates with agricultural data sources for enriched insights.',
+    image: null,
+    imageGradient: 'from-green-500 to-lime-600',
+    tags: ['Python', 'OpenCV', 'TensorFlow', 'spaCy', 'Computer Vision', 'NLP', 'Advisory Chatbot', 'Image Analysis'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '2 weeks',
+    year: '2024',
+    client: 'Independent Project',
+    featured: false,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Crop-Disease-Chatbot' }
+    ],
+  },
+  {
+    id: 'speech-emotion-analyzer',
+    title: 'Speech Emotion Analyzer',
+    description: 'Built a neural network-based system to recognize emotions from spoken audio. Uses librosa for audio feature extraction, TensorFlow for model training and classification, and provides real-time emotion detection suitable for conversational analysis or interactive applications.',
+    image: null,
+    imageGradient: 'from-blue-400 to-indigo-600',
+    tags: ['Python', 'Librosa', 'TensorFlow', 'Neural Networks', 'Audio Processing', 'Emotion Recognition', 'Speech Analysis', 'Real-Time AI'],
+    category: 'AI/ML',
+    status: 'Completed',
+    timeline: '3 weeks',
+    year: '2024',
+    client: 'Independent Project',
+    featured: false,
+    links: [
+      { type: 'github', url: 'https://github.com/IbtissamEchchaibi19/Speech-Emotion-Analyzer' }
+    ],
+  },
 
 ]
 
 
-const categories = ['All', 'AI/ML', 'Full-Stack', 'Distributed Systems']
+
+
+const categories = ['All', 'AI/ML', 'Full-Stack', 'Cloud']
 
 const getProjectIcon = (category: string) => {
   switch (category) {
