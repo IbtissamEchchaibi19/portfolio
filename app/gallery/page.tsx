@@ -1,161 +1,260 @@
+'use client' // Add this line at the very top
+
 import { Metadata } from 'next'
-import path from 'path'
-import { promises as fs } from 'fs'
-import GalleryGrid from '../../components/ui/gallery-new'
 import { AnimatedBackground } from '@/components/3d/animated-background'
 import { Separator } from '@/components/ui/separator'
-import { Camera, MapPin, Calendar, Images } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Award, Calendar, ExternalLink, BookOpen, Trophy, Star } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Gallery | Reda El Hadfi',
-  description: 'A photo gallery showcasing pictures I take.',
-}
+// Note: You'll need to move metadata to a separate layout or parent component
+// since client components can't export metadata
+// export const metadata: Metadata = {
+//   title: 'Certifications | Ibtissam Ech-Chaibi',
+//   description: 'Professional certifications and courses completed in AI, Machine Learning, Data Science, and Web Development.',
+// }
 
-const SUPPORTED_EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
-const PREFERRED_FORMATS = ['.avif', '.webp', '.jpg', '.jpeg', '.png'] // Order of preference
-
-async function findBestImageFormat(dir: string, baseName: string): Promise<string | null> {
-  const nameWithoutExt = path.parse(baseName).name
-  
-  // Try formats in order of preference
-  for (const ext of PREFERRED_FORMATS) {
-    const testFile = `${nameWithoutExt}${ext}`
-    const fullPath = path.join(dir, testFile)
-    
-    try {
-      await fs.access(fullPath)
-      return testFile // Return the filename, not the full path
-    } catch {
-      continue
-    }
+const certifications = [
+  {
+    title: 'Data Analysis with Python',
+    provider: 'IBM',
+    issued: 'Apr 2024',
+    skills: ['Matplotlib', 'SQL', 'Python (Programming Language)', 'pandas', 'Seaborn'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/python-data-analysis'
+  },
+  {
+    title: 'HTML & CSS & BOOTSTRAP',
+    provider: 'Noble Work Foundation',
+    issued: 'Feb 2023',
+    skills: ['HTML', 'CSS', 'Bootstrap'],
+    logo: 'Noble Work Foundation',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/html-css-bootstrap'
+  },
+  {
+    title: 'How the internet works & the web development process',
+    provider: 'Udemy',
+    issued: 'Feb 2023',
+    skills: ['Web Development', 'Internet Protocols'],
+    logo: 'Udemy',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/internet-web'
+  },
+  {
+    title: 'AWS Cloud Technical Essentials',
+    provider: 'Amazon Web Services (AWS)',
+    issued: 'Aug 2024',
+    skills: ['Amazon S3', 'Amazon EC2'],
+    logo: 'AWS',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/aws-technical-essentials'
+  },
+  {
+    title: 'Deep Learning with Python (TensorFlow)',
+    provider: 'freeCodeCamp',
+    issued: 'Jul 2024',
+    skills: ['Keras', 'CNC', 'spaCy', 'LSTM', 'Python (Programming Language)'],
+    logo: 'freeCodeCamp',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/dl-python-tensorflow'
+  },
+  {
+    title: 'Foundational Generative AI - Certificate',
+    provider: 'iNeuron.ai',
+    issued: 'Jul 2024',
+    skills: ['Large Language Models (LLM)', 'Pinecone', 'LlamaIndex', 'LSTM', 'Python (Programming Language)'],
+    logo: 'iNeuron.ai',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/foundational-generative-ai'
+  },
+  {
+    title: 'IBM Data Science Proficiency Certificate',
+    provider: 'IBM',
+    issued: 'Jan 2024',
+    skills: ['Matplotlib', 'Scikit-Learn', 'Applied Mathematics', 'pandas'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/ibm-data-science-proficiency'
+  },
+  {
+    title: 'Data Visualization with Python',
+    provider: 'IBM',
+    issued: 'May 2024',
+    skills: ['Matplotlib', 'Python (Programming Language)', 'pandas', 'Seaborn'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/data-visualization-python'
+  },
+  {
+    title: 'AI Career Essentials',
+    provider: 'ALX AiCE',
+    issued: 'Feb 2024',
+    skills: ['AI Fundamentals', 'Career Development'],
+    logo: 'ALX',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/ai-career-essentials'
+  },
+  {
+    title: 'Machine Learning with Python',
+    provider: 'IBM',
+    issued: 'Mar 2024',
+    skills: ['Scikit-Learn', 'Python (Programming Language)'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/machine-learning-python'
+  },
+  {
+    title: 'Python for Data Science, AI & Development',
+    provider: 'IBM',
+    issued: 'Mar 2024',
+    skills: ['FastAPI', 'Matplotlib', 'Flask', 'Python (Programming Language)'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/python-data-science-ai'
+  },
+  {
+    title: 'Data Science Methodology',
+    provider: 'IBM',
+    issued: 'Feb 2024',
+    skills: ['Data Science', 'Methodology'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/data-science-methodology'
+  },
+  {
+    title: 'Tools for Data Science',
+    provider: 'IBM',
+    issued: 'Feb 2024',
+    skills: ['Data Science Tools'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/tools-data-science'
+  },
+  {
+    title: 'What is Data Science?',
+    provider: 'IBM',
+    issued: 'Feb 2024',
+    skills: ['Data Science Fundamentals'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/what-is-data-science'
+  },
+  {
+    title: 'Developing Back-End Apps with Node.js and Express',
+    provider: 'IBM',
+    issued: 'Jan 2024',
+    skills: ['React.js', 'Express.js', 'Node.js'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/backend-node-express'
+  },
+  {
+    title: 'Developing Front-End Apps with React',
+    provider: 'IBM',
+    issued: 'Dec 2023',
+    skills: ['React.js', 'Frontend Development'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/frontend-react'
+  },
+  {
+    title: 'Introduction to Cloud Computing',
+    provider: 'IBM',
+    issued: 'Jan 2024',
+    skills: ['Amazon S3', 'Amazon EC2'],
+    logo: 'IBM',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/cloud-computing'
+  },
+  {
+    title: 'Git command',
+    provider: 'Udemy',
+    issued: 'Aug 2023',
+    skills: ['Git'],
+    logo: 'Udemy',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/git-command'
+  },
+  {
+    title: 'What is a web development framework?',
+    provider: 'Udemy',
+    issued: 'Apr 2023',
+    skills: ['Web Development Frameworks'],
+    logo: 'Udemy',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/web-development-framework'
+  },
+  {
+    title: 'TailwindCSS',
+    provider: 'Udemy',
+    issued: 'Apr 2023',
+    skills: ['TailwindCSS'],
+    logo: 'Udemy',
+    hasCredential: true,
+    link: 'https://www.your-credential-link.com/tailwindcss'
   }
-  
-  return null
-}
-
-type MetaRecord = { [filename: string]: { description?: string; location?: string } }
-type ServerImageItem = { src: string; alt?: string; description?: string; location?: string; mtimeMs?: number }
-
-const FALLBACK_LOCATIONS = [
-  'Rabat',
-  'Meknes',
-  'Ain Karma',
-  'Fes',
-  'Casablanca',
-  'Tangier',
-  'Agadir',
-  'Ifrane',
-  'Chefchaouen',
-  'Ouarzazate',
 ]
 
-const FALLBACK_DESCRIPTIONS = [
-  'Golden hour',
-  'Street scene',
-  'Quiet morning',
-  'City lights',
-  'Candid moment',
-  'Seaside breeze',
-  'Mountain trail',
-  'Old medina',
-  'Sunset silhouette',
-  'Night reflections',
-]
+function CertificationCard({ cert, index }: { cert: typeof certifications[0], index: number }) {
+  return (
+    <div 
+      className="group relative bg-card/50 backdrop-blur-sm border rounded-lg p-6 transition-all duration-300 hover:bg-card/70 hover:scale-[1.02] hover:shadow-lg animate-fade-up"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+            {cert.title}
+          </h3>
+          <div className="flex items-center text-muted-foreground text-sm mb-2">
+            <BookOpen className="w-4 h-4 mr-2" />
+            {cert.provider}
+          </div>
+          <div className="flex items-center text-muted-foreground text-xs">
+            <Calendar className="w-3 h-3 mr-1" />
+            Issued {cert.issued}
+          </div>
+        </div>
+        <div className="flex items-center ml-4">
+          <Trophy className="w-6 h-6 text-muted-foreground" />
+        </div>
+      </div>
 
-function pick<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
+      {cert.skills && cert.skills.length > 0 && (
+        <div className="mb-4">
+          <p className="text-sm font-medium text-foreground mb-2">Skills:</p>
+          <div className="flex flex-wrap gap-1">
+            {cert.skills.map((skill, idx) => (
+              <Badge key={idx} variant="secondary" className="text-xs">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {cert.hasCredential && cert.link && (
+        <div className="flex justify-end pt-4 border-t border-border/30">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="text-xs opacity-70 hover:opacity-100"
+            onClick={() => window.open(cert.link, '_blank')} // Now this will work!
+          >
+            <ExternalLink className="w-3 h-3 mr-1" />
+            View Credential
+          </Button>
+        </div>
+      )}
+    </div>
+  )
 }
 
-async function getImages(): Promise<ServerImageItem[]> {
-  const dir = path.join(process.cwd(), 'public', 'gallery')
-  try {
-    // Load optional metadata.json if present
-    let meta: MetaRecord = {}
-    try {
-      const metaPath = path.join(dir, 'metadata.json')
-      const raw = await fs.readFile(metaPath, 'utf-8')
-      const parsed = JSON.parse(raw)
-      if (Array.isArray(parsed)) {
-        // Support array form: [{ file, description, location }]
-        meta = parsed.reduce<MetaRecord>((acc, item) => {
-          if (item && typeof item.file === 'string') {
-            acc[item.file] = {
-              description: item.description,
-              location: item.location,
-            }
-          }
-          return acc
-        }, {})
-      } else if (parsed && typeof parsed === 'object') {
-        // Support object map form: { "file.jpg": { description, location } }
-        meta = parsed as MetaRecord
-      }
-    } catch {
-      // No metadata.json found or invalid JSON; proceed without metadata
-    }
-
-    const entries = await fs.readdir(dir, { withFileTypes: true })
-    const allFiles = entries
-      .filter((e) => e.isFile())
-      .map((e) => e.name)
-      .filter((name) => SUPPORTED_EXT.has(path.extname(name).toLowerCase()))
-    
-    // Get unique base names (without extension) to avoid duplicates
-    const baseNames = new Set<string>()
-    allFiles.forEach(filename => {
-      const baseName = path.parse(filename).name
-      baseNames.add(baseName)
-    })
-    
-    // Find the best format for each base name
-    const bestFiles = await Promise.all(
-      Array.from(baseNames).map(async (baseName) => {
-        const bestFormat = await findBestImageFormat(dir, baseName)
-        return bestFormat
-      })
-    )
-    
-    const files = bestFiles.filter(Boolean) as string[]
-    
-    const withStats = await Promise.all(
-      files.map(async (name) => {
-        let mtimeMs: number | undefined = undefined
-        try {
-          const st = await fs.stat(path.join(dir, name))
-          mtimeMs = st.mtimeMs
-        } catch {}
-        const loc = meta[name]?.location as string | undefined
-        const desc = meta[name]?.description as string | undefined
-        const fallbackLoc = loc || pick(FALLBACK_LOCATIONS)
-        const fallbackDesc = desc || `${pick(FALLBACK_DESCRIPTIONS)} in ${fallbackLoc}`
-        return {
-          src: `/gallery/${name}`,
-          alt: fallbackDesc,
-          description: fallbackDesc,
-          location: fallbackLoc,
-          mtimeMs,
-        } satisfies ServerImageItem
-      })
-    )
-    return withStats
-  } catch {
-    // Directory might not exist yet
-    return []
-  }
-}
-
-export default async function GalleryPage() {
-  let images: ServerImageItem[] = []
-  try {
-    images = await getImages()
-  } catch (error) {
-    console.error('Error loading images:', error)
-    images = []
-  }
-  
-  const uniqueLocations = new Set(images.map((i) => i.location).filter(Boolean) as string[])
-  const lastUpdatedMs = images.length ? Math.max(...images.map((i) => i.mtimeMs || 0)) : 0
-  const lastUpdated = lastUpdatedMs ? new Date(lastUpdatedMs).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' }) : null
+export default function CertificationsPage() {
+  const totalSkills = new Set(certifications.flatMap(cert => cert.skills || [])).size
+  const providers = new Set(certifications.map(cert => cert.provider)).size
 
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
@@ -171,50 +270,46 @@ export default async function GalleryPage() {
             <div className="text-center max-w-4xl mx-auto">
               {/* Main Title */}
               <div className="flex flex-col items-center justify-center mb-6">
-                {/* Camera Icon with Pulse Animation */}
                 <div className="relative mb-4">
-                  <Camera className="w-12 h-12 md:w-14 md:h-14 text-primary animate-pulse" />
-                  {/* Flash Effect */}
+                  <Award className="w-12 h-12 md:w-14 md:h-14 text-primary animate-pulse" />
                   <div className="absolute inset-0 w-12 h-12 md:w-14 md:h-14 bg-primary/20 rounded-full animate-ping"></div>
-                  {/* Shutter Effect */}
                   <div className="absolute inset-0 w-12 h-12 md:w-14 md:h-14 border-2 border-primary/30 rounded-full animate-spin-slow"></div>
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                  Photo Gallery
+                  Certifications
                 </h1>
               </div>
               
-              {/* Subtitle */}
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                A curated collection of moments captured through my lens, 
-                showcasing the beauty of everyday life and travel adventures.
+                Professional certifications and courses completed in AI, Machine Learning, 
+                Data Science, and Web Development to stay current with industry trends.
               </p>
 
               {/* Stats Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto mb-8">
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-4 md:p-6 transition-all hover:bg-card/70 animate-fade-up hover:scale-105" style={{ animationDelay: '0.1s' }}>
                   <div className="flex items-center justify-center mb-2">
-                    <Images className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
-                    <span className="text-2xl md:text-3xl font-bold text-foreground">{images.length}</span>
+                    <Award className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
+                    <span className="text-2xl md:text-3xl font-bold text-foreground">{certifications.length}</span>
                   </div>
-                  <p className="text-sm md:text-base text-muted-foreground">Photos</p>
+                  <p className="text-sm md:text-base text-muted-foreground">Total Certificates</p>
                 </div>
                 
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-4 md:p-6 transition-all hover:bg-card/70 animate-fade-up hover:scale-105" style={{ animationDelay: '0.2s' }}>
                   <div className="flex items-center justify-center mb-2">
-                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
-                    <span className="text-2xl md:text-3xl font-bold text-foreground">{uniqueLocations.size}</span>
+                    <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
+                    <span className="text-2xl md:text-3xl font-bold text-foreground">{providers}</span>
                   </div>
-                  <p className="text-sm md:text-base text-muted-foreground">Locations</p>
+                  <p className="text-sm md:text-base text-muted-foreground">Providers</p>
                 </div>
                 
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-4 md:p-6 transition-all hover:bg-card/70 animate-fade-up hover:scale-105" style={{ animationDelay: '0.3s' }}>
                   <div className="flex items-center justify-center mb-2">
-                    <Calendar className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
-                    <span className="text-sm md:text-base font-bold text-foreground">{lastUpdated || 'N/A'}</span>
+                    <Star className="w-5 h-5 md:w-6 md:h-6 text-primary mr-2" />
+                    <span className="text-2xl md:text-3xl font-bold text-foreground">{totalSkills}</span>
                   </div>
-                  <p className="text-sm md:text-base text-muted-foreground">Last Updated</p>
+                  <p className="text-sm md:text-base text-muted-foreground">Skills Covered</p>
                 </div>
               </div>
 
@@ -228,46 +323,14 @@ export default async function GalleryPage() {
           </div>
         </section>
 
-        {/* Gallery Section */}
+        {/* Certifications List */}
         <section className="pb-20 md:pb-28 lg:pb-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {images.length === 0 ? (
-              <div className="text-center py-20 md:py-32">
-                {/* Animated Loading State */}
-                <div className="relative inline-block mb-6">
-                  <Camera className="w-16 h-16 md:w-20 md:h-20 text-muted-foreground/50 mx-auto animate-pulse" />
-                  {/* Camera Flash Effect */}
-                  <div className="absolute inset-0 w-16 h-16 md:w-20 md:h-20 bg-primary/30 rounded-full mx-auto animate-camera-flash"></div>
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-4 animate-fade-up">
-                  No images found
-                </h3>
-                <p className="text-muted-foreground mb-6 max-w-md mx-auto animate-fade-up" style={{ animationDelay: '0.2s' }}>
-                  Create the folder <code className="font-mono bg-muted px-2 py-1 rounded text-sm">public/gallery</code> and add your images.
-                </p>
-                <p className="text-sm text-muted-foreground/70 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-                  Supported formats: JPG, PNG, WebP, AVIF, GIF
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-8 animate-photo-develop">
-                {/* Gallery Title */}
-                <div className="text-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-2">
-                    Latest Captures
-                  </h2>
-                  <p className="text-muted-foreground">
-                    Click on any image to view it in full resolution
-                  </p>
-                </div>
-                
-                {/* Gallery Grid */}
-                <div className="mt-8 md:mt-12 animate-fade-up" style={{ animationDelay: '0.7s' }}>
-                  <GalleryGrid images={images} />
-                </div>
-              </div>
-            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => (
+                <CertificationCard key={cert.title + cert.issued} cert={cert} index={index} />
+              ))}
+            </div>
           </div>
         </section>
       </div>
