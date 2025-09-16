@@ -1,7 +1,7 @@
 'use client'
 
 import { lazy, Suspense } from "react"
-import { HeroSection } from "@/components/sections/hero" // Keep hero section for immediate loading
+import { HeroSection } from "@/components/sections/hero" // Load hero immediately
 import { AnimatedBackground } from "@/components/3d/animated-background"
 
 // Lazy load non-critical sections
@@ -22,19 +22,17 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Reda El Hadfi",
-            "jobTitle": "Software Engineer",
-            "url": "https://reda-el-hadfi.com",
+            "name": "Ibtissam Ech-Chaibi",
+            "jobTitle": "AI Engineer & Full-Stack Developer",
+            "url": "https://your-domain.com",
             "sameAs": [
-              "https://www.linkedin.com/in/reda-elhadfi",
-              "https://github.com/redaelhadfi"
+              "https://www.linkedin.com/in/ibtissamechchaibi",
+              "https://github.com/IbtissamEchchaibi19"
             ],
             "knowsAbout": [
-              "Software Engineering",
-              "Backend Development", 
               "AI & Machine Learning",
               "Python",
-              "Django", 
+              "Django",
               "Flask",
               "React",
               "Next.js",
@@ -42,7 +40,8 @@ export default function HomePage() {
               "Docker",
               "Data Science",
               "Computer Vision",
-              "REST APIs"
+              "REST APIs",
+              "Full-Stack Development"
             ],
             "address": {
               "@type": "PostalAddress",
@@ -58,31 +57,31 @@ export default function HomePage() {
         <div className="fixed top-0 left-0 w-full h-full -z-10">
           <AnimatedBackground />
         </div>
-        
+
         <div className="relative z-10">
           {/* Hero Section - Load immediately */}
           <HeroSection />
-          
+
           {/* Trust Strip - Lazy loaded */}
           <Suspense fallback={<div className="h-20 bg-black/20 animate-pulse" />}>
             <TrustStrip />
           </Suspense>
-          
+
           {/* Featured Projects - Lazy loaded */}
           <Suspense fallback={<div className="h-96 bg-black/20 animate-pulse" />}>
             <FeaturedProjects />
           </Suspense>
-          
+
           {/* Services - Lazy loaded */}
           <Suspense fallback={<div className="h-96 bg-black/20 animate-pulse" />}>
             <WhatIDo />
           </Suspense>
-          
+
           {/* Testimonials - Lazy loaded */}
           <Suspense fallback={<div className="h-96 bg-black/20 animate-pulse" />}>
             <Testimonials />
           </Suspense>
-          
+
           {/* CTA - Lazy loaded */}
           <Suspense fallback={<div className="h-32 bg-black/20 animate-pulse" />}>
             <CTABand />

@@ -3,23 +3,12 @@
 import { ExternalLink, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
 
 export function FreelancerWidget() {
   return (
     <Card className="p-6 max-w-md bg-card/50 backdrop-blur-sm border-primary/20">
       <div className="flex items-start gap-4">
         {/* Profile Image */}
-        <div className="relative flex-shrink-0">
-          <Image
-            src="https://cdn5.f-cdn.com/ppic/279372228/logo/71005125/profile_logo_71005125.jpg"
-            alt="Reda El Hadfi"
-            width={80}
-            height={80}
-            className="rounded-full border-2 border-primary/30"
-          />
-        </div>
-
         {/* Content */}
         <div className="flex-1 space-y-3">
           <div>

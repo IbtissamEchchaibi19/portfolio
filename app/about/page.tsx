@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -122,36 +121,6 @@ export default function AboutPage() {
                         <ExternalLink className="w-4 h-4 mr-2" /> View Resume
                       </Link>
                     </Button>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-8">
-                    <Image
-                    src="/reda.jpeg"       // <--- updated here
-                    alt="Ibtissam Ech-Chaibi"
-                    width={400}
-                    height={500}
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                   />
-
-                  </div>
-                  <div className="absolute -bottom-6 -left-6 bg-card border rounded-lg p-4 shadow-lg">
-                    <div className="flex items-center">
-                      <Code className="w-8 h-8 text-primary mr-3" />
-                      <div>
-                        <p className="text-2xl font-bold">25+</p>
-                        <p className="text-sm text-muted-foreground">Projects</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute -top-6 -right-6 bg-card border rounded-lg p-4 shadow-lg">
-                    <div className="flex items-center">
-                      <Calendar className="w-8 h-8 text-primary mr-3" />
-                      <div>
-                        <p className="text-2xl font-bold">3+</p>
-                        <p className="text-sm text-muted-foreground">Years Exp</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -278,7 +247,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Personal Touch */}
+        {/* Personal Touch Section */}
         <section className="py-16 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">

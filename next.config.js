@@ -5,12 +5,27 @@ const bundleAnalyzer = withBundleAnalyzer({
 })
 
 const nextConfig = {
-  // Image optimization
+  // Image optimization - UPDATED to use remotePatterns instead of domains
   images: {
-    domains: [
-      'cdn5.f-cdn.com', // Freelancer.com CDN
-      'images.unsplash.com', // Unsplash for project images
-      'user-images.githubusercontent.com', // GitHub user content
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn5.f-cdn.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
     formats: ['image/webp', 'image/avif'], // Modern formats for better compression
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

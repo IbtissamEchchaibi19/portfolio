@@ -1,6 +1,5 @@
 'use client' // Add this line at the very top
 
-import { Metadata } from 'next'
 import { AnimatedBackground } from '@/components/3d/animated-background'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'

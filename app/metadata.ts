@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: 'https://your-domain.com',
     siteName: 'Ibtissam Ech-Chaibi Portfolio',
     title: 'Ibtissam Ech-Chaibi — AI Engineer & Full-Stack Developer',
-    description: 'Portfolio of Ibtissam Ech-Chaibi, software engineering student and freelance AI & full-stack developer specializing in Python, Django, React, and AWS.',
+    description: 'Portfolio of Ibtissam Ech-Chaibi, software engineering student and freelance AI & full-stack developer specializing in Python, React, and AWS.',
     images: [
       {
         url: '/og-image.jpg',

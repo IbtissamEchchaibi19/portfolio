@@ -14,7 +14,7 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error('Homepage error:', error)
+    console.error('App error:', error)
   }, [error])
 
   return (
@@ -31,7 +31,7 @@ export default function Error({
           
           <p className="text-muted-foreground mb-8">
             We encountered an unexpected error while loading the page. 
-            This might be a temporary issue.
+            Please try again or return to the homepage.
           </p>
 
           {process.env.NODE_ENV === 'development' && (
@@ -63,14 +63,11 @@ export default function Error({
 
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              If the problem persists, please{' '}
-              <a 
-                href="mailto:reda.elhadfi@inpt.ac.ma" 
-                className="text-accent hover:underline"
-              >
-                contact me
-              </a>
-              {' '}and I&apos;ll look into it.
+              If the problem continues, please{' '}
+              <Link href="/contact" className="text-accent hover:underline">
+                contact support
+              </Link>
+              .
             </p>
           </div>
         </div>

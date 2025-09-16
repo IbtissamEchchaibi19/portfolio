@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -409,26 +408,17 @@ export default function ProjectsPage() {
                       .map((project) => (
                         <Card key={project.id} className="flex flex-col overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                           <div className="relative overflow-hidden">
-                            {project.image ? (
-                              <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={400}
-                                height={240}
-                                className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300"
-                              />
-                            ) : (
-                              <div className={`w-full h-60 bg-gradient-to-br ${project.imageGradient} flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-300 relative`}>
-                                <div className="text-white text-center p-4 z-10">
-                                  <div className="mb-3 opacity-80">
-                                    {getProjectIcon(project.category)}
-                                  </div>
-                                  <h3 className="font-bold text-base mb-1 line-clamp-2">{project.title}</h3>
-                                  <p className="text-xs opacity-80">{project.category}</p>
+                            {/* Since all projects have image: null, we only show the gradient version */}
+                            <div className={`w-full h-60 bg-gradient-to-br ${project.imageGradient} flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-300 relative`}>
+                              <div className="text-white text-center p-4 z-10">
+                                <div className="mb-3 opacity-80">
+                                  {getProjectIcon(project.category)}
                                 </div>
-                                <div className="absolute inset-0 bg-black/20"></div>
+                                <h3 className="font-bold text-base mb-1 line-clamp-2">{project.title}</h3>
+                                <p className="text-xs opacity-80">{project.category}</p>
                               </div>
-                            )}
+                              <div className="absolute inset-0 bg-black/20"></div>
+                            </div>
                             <div className="absolute top-4 left-4">
                               <Badge
                                 variant={project.status === 'Completed' ? 'default' : 'secondary'}

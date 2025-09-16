@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export interface ProjectData {
   id: string;
@@ -42,12 +41,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <Card className={`h-full flex flex-col bg-card/50 border-2 ${project.borderColor} hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-2xl overflow-hidden`}>
         {/* Project Image */}
         <div className="relative h-48 overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           
           {/* Status Badge Overlay */}

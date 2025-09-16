@@ -7,12 +7,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-    { href: "/gallery", label: "Gallery" },
+  { href: "/gallery", label: "Certifications" },
   { href: "/about", label: "About" },
   { href: "/experience", label: "Experience" },
   { href: "/contact", label: "Contact" },
@@ -64,17 +63,6 @@ export function Header() {
             transition={{ type: "spring", stiffness: 400 }}
           >
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="relative h-9 w-9 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-cyan-400/25 group-hover:shadow-xl">
-                  <Image
-                    src="/reda.jpeg"
-                    alt="Ibtissam Ech-Chaibi"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
               <div className="hidden sm:block">
                 <span className="font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
                   Ibtissam Ech-Chaibi
@@ -158,14 +146,6 @@ export function Header() {
                     className="flex items-center gap-3"
                     onClick={() => setIsOpen(false)}
                   >
-                    <div className="relative h-10 w-10 rounded-xl overflow-hidden">
-                      <Image
-                        src="/reda.jpeg"
-                        alt="Ibtissam Ech-Chaibi"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
                     <div>
                       <div className="font-semibold text-white">Ibtissam Ech-Chaibi</div>
                       <div className="text-xs text-gray-400 font-mono">AI Architect & Full-Stack Pro</div>
